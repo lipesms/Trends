@@ -4,10 +4,11 @@ import Footer from '../components/Footer'
 
 import dune from '../assets/images/dune.png'
 import pooh from '../assets/images/kung_fu_panda_4.png'
-import trash from '../assets/images/madame_web.png'
 import poorThings from '../assets/images/poor_things.png'
-import damsel from '../assets/images/damsel.png'
-import godzilla from '../assets/images/godzilla.png'
+import deadpool from '../assets/images/deadpool.png'
+import matadorAluguel from '../assets/images/matador_de_aluguel.png'
+import wonka from '../assets/images/wonka.png'
+import oppenheimer from '../assets/images/oppenheimer.png'
 
 import hxh from '../assets/images/hunter_hunter.png'
 import fallout from '../assets/images/fallout.png'
@@ -22,7 +23,15 @@ import sydneySweeney from '../assets/images/sydney_sweeney.png'
 import timotheChalamet from '../assets/images/timothe_chalamet.png'
 
 const Home = () => {
-  const filmes = [dune, pooh, trash, poorThings, damsel, godzilla]
+  const filmes = [
+    dune,
+    pooh,
+    poorThings,
+    deadpool,
+    matadorAluguel,
+    wonka,
+    oppenheimer
+  ]
   const series = [hxh, fallout, friends, got, mrRobot]
   const famosos = [
     emmaStone,
@@ -35,7 +44,7 @@ const Home = () => {
   return (
     <div className="flex flex-col relative bg-primary-blue ">
       <NavBar />
-      <div className="pt-36 lg:ps-52 lg:pt-0">
+      <div className="pt-24 lg:ps-36 lg:pt-0">
         <Section title="Filmes da Semana" slides={filmes} />
         <Section title="Tendência de séries" slides={series} />
         <Section title="Famosos do momento" slides={famosos} />

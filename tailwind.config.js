@@ -9,13 +9,13 @@ export default {
     extend: {
       gridTemplateColumns: {
         // Simple 16 column grid
-        16: '200px minmax(0, 1fr)',
+        16: '160px minmax(0, 1fr)',
 
         // Complex site-specific column configuration
         footer: '200px minmax(900px, 1fr) 100px'
       },
       colors: {
-        'primary-blue': '#10141F',
+        'primary-blue': '#032541',
         'secondary-blue': '#455480',
         'hover-card-black': 'rgba(0,0,0, 0.7)'
       },
@@ -31,6 +31,9 @@ export default {
       },
       dropShadow: {
         '3xl': '0 10px 16px #fff2'
+      },
+      backgroundImage: {
+        'body-pattern': "url('./src/assets/images/background_home.png')"
       }
     }
   },

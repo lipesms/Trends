@@ -1,12 +1,9 @@
 import logo from '../assets/icons/trends_full_logo.png'
 import logoMobile from '../assets/icons/trends_small_logo.png'
-import claquete from '../assets/icons/claquete.png'
-import famosos from '../assets/icons/famoso.png'
-import tv from '../assets/icons/tv.png'
 
 const NavBar = () => {
   return (
-    <div className="z-10 fixed h-36 w-screen bg-primary-blue h-36 lg:h-screen lg:pt-20 px-8 lg:px-10 lg:max-w-52">
+    <div className="z-10 fixed h-24 w-screen h-24 bg-primary-blue  lg:h-screen lg:pt-10 px-8 lg:px-5 lg:px-0 lg:max-w-40">
       <div className="flex justify-between items-center h-full lg:flex-col lg:items-center lg:justify-normal">
         <a href="">
           <img
@@ -17,27 +14,18 @@ const NavBar = () => {
           <img
             src={logoMobile}
             alt="Logo MovieTrends"
-            className="h-16 md:hidden"
+            className="h-12 md:hidden"
           />
         </a>
         <div className="flex lg:flex-col lg:mt-8 cursor-pointer lg:mt-4">
-          <a className="flex items-center justify-start lg:mb-6">
-            <h3 className="hidden text-white order-1 ms-2 md:inline-block text-2xl">
-              Filmes
-            </h3>
-            <img src={claquete} alt="" className="h-10 w-10 lg:h-10 lg:w-10" />
+          <a className="box-border flex items-center justify-start text-white font-bold ms-2 sm:ms-6 md:inline-block sm:text-xl lg:ms-0 lg:mb-6 pb-1 border-solid border-b-2 border-transparent hover:border-white transition easy-out duration-200">
+            Filmes
           </a>
-          <a className="flex items-center ms-6 lg:ms-0 lg:mb-6">
-            <h3 className="hidden text-white order-1 ms-2 md:inline-block text-2xl">
-              Séries
-            </h3>
-            <img src={tv} alt="" className="h-10 w-10 lg:h-11 lg:w-11" />
+          <a className="flex items-center justify-start text-white font-bold  ms-2 sm:ms-6 md:inline-block sm:text-xl lg:ms-0 lg:mb-6 pb-1 border-solid border-b-2 border-transparent hover:border-white transition easy-out duration-200">
+            Séries
           </a>
-          <a className="flex items-center ms-6 lg:ms-0 lg:mb-6">
-            <h3 className="hidden text-white order-1 ms-2 md:inline-block text-2xl">
-              Famosos
-            </h3>
-            <img src={famosos} alt="" className="h-10 w-10 lg:h-11 lg:w-11" />
+          <a className="flex items-center justify-start text-white font-bold  ms-2 sm:ms-6 md:inline-block sm:text-xl lg:ms-0 lg:mb-6 pb-1 border-solid border-b-2 border-transparent hover:border-white transition easy-out duration-200">
+            Famosos
           </a>
         </div>
       </div>
