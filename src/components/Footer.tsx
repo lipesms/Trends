@@ -2,7 +2,7 @@ import logoTMDB from '../assets/icons/logo_tmdb.svg'
 import up from '../assets/icons/dedo-indicador.png'
 
 const Footer = () => (
-  <footer className="relative pt-28 px-8 pb-14 md:ps-14 bg-body-pattern">
+  <footer className="relative pt-28 px-8 pb-14 md:ps-14">
     <div className="max-w-618">
       <p className="text-white  mb-1  ">
         A Treads é um site para ficar por dentro das tendências do cinema, sendo

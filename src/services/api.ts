@@ -24,7 +24,8 @@ type Populares = {
 
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://api.themoviedb.org/3/movie/popular?language=en-US&page=2',
+    baseUrl:
+      'https://api.themoviedb.org/3/trending/movie/week?language=pt-BR&page=1',
     prepareHeaders: (headers) => {
       const token =
         'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNWNiYTRiNTNjNTI1M2IxY2I1MmMxZWJkN2QyNDcxZSIsInN1YiI6IjY2MWYwNTMzMjBhZjc3MDE2NDNkYWFlMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sY2t9sNETOYwp97ZJ8YFAKVTJmp306FWb0ZZazvvTuo'

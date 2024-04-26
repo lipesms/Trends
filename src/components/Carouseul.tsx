@@ -1,7 +1,8 @@
 import { TouchEvent, useState } from 'react'
+import { slidesFilmes } from './Section'
 
 type Props = {
-  slides: string[]
+  slides: slidesFilmes[]
   className: string
 }
 
@@ -43,15 +44,15 @@ const Carousel = ({ slides, className }: Props) => {
       className={`max-w-315  overflow-hidden relative mx-4 ${className} rounded-2xl`}
     >
       <div
-        className={`flex items-center gap-x-6 transition easy-out duration-40 `}
+        className={`flex items-center transition easy-out duration-40 `}
         style={{
-          transform: `translateX(-${current * 100 + current * 7}%)`
+          transform: `translateX(-${current * 100}%)`
         }}
       >
         {slides.map((s, i) => {
           return (
             <div key={`image: ${i}`} className="h-90 min-w-90 ">
-              <img className="w-full h-full rounded-2xl" src={s} alt="" />
+              <img className="w-full h-full rounded-2xl" src={s.image} alt="" />
             </div>
           )
         })}

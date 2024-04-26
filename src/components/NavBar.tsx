@@ -3,7 +3,7 @@ import logoMobile from '../assets/icons/trends_small_logo.png'
 
 const NavBar = () => {
   return (
-    <div className="z-10 fixed h-24 w-screen h-24 bg-primary-blue  lg:h-screen lg:pt-10 px-8 lg:px-5 lg:px-0 lg:max-w-40">
+    <div className="z-10 fixed h-24 w-screen h-24 bg-primary-blue lg:h-screen lg:pt-10 px-8 lg:px-5 lg:px-0 lg:max-w-40">
       <div className="flex justify-between items-center h-full lg:flex-col lg:items-center lg:justify-normal">
         <a href="">
           <img
