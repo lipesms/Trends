@@ -33,7 +33,8 @@ export default {
         '3xl': '0 10px 16px #fff2'
       },
       backgroundImage: {
-        'body-pattern': "url('./src/assets/images/background_home.png')"
+        'body-pattern':
+          "url('https://lipesms.github.io/Trends//src/assets/images/background_home.png')"
       }
     }
   },
