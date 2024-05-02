@@ -31,9 +31,9 @@ const PersonSection = ({ title, dados }: Props) => {
     const lastX = e.changedTouches[0].clientX
     const direction = firstX - lastX
 
-    if (direction > 0) {
+    if (direction > 30) {
       nextSlide()
-    } else if (direction === 0) {
+    } else if (direction <= 30 || direction >= -30) {
       console.log('sem direcao')
     } else {
       previousSlide()
@@ -45,7 +45,7 @@ const PersonSection = ({ title, dados }: Props) => {
   } else {
     return (
       <section className="relative w-90 pt-4 pb-8 flex flex-col items-center lg:w-full lg:items-start lg:pt-10 lg:ps-14 lg:h-fit lg:pe-7">
-        <h2 className="select-none text-2xl font-bold text-white pb-4 ps-8 font-display drop-shadow-3xl lg:text-3xl lg:pb-9">
+        <h2 className="select-none text-2xl font-bold text-white pb-4 lg:ps-8 font-display drop-shadow-3xl lg:text-3xl lg:pb-9">
           {title}
         </h2>
         <div

@@ -31,9 +31,9 @@ const Carousel = ({ slides, className }: Props) => {
     const lastX = e.changedTouches[0].clientX
     const direction = firstX - lastX
 
-    if (direction > 100) {
+    if (direction > 30) {
       nextSlide()
-    } else if (direction <= 100 || direction >= -100) {
+    } else if (direction <= 30 || direction >= -30) {
       console.log('sem direcao')
     } else {
       previousSlide()
