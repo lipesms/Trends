@@ -31,9 +31,9 @@ const PersonSection = ({ title, dados }: Props) => {
     const lastX = e.changedTouches[0].clientX
     const direction = firstX - lastX
 
-    if (direction > 30) {
+    if (direction > 40) {
       nextSlide()
-    } else if (direction <= 30 || direction >= -30) {
+    } else if (Math.abs(direction) <= 40) {
       console.log('sem direcao')
     } else {
       previousSlide()
