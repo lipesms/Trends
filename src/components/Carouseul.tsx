@@ -1,8 +1,9 @@
 import { TouchEvent, useState } from 'react'
-import { slidesFilmes } from './Section'
+import { Result } from '../services/api'
+import Card from './Card'
 
 type Props = {
-  slides: slidesFilmes[]
+  slides: Result[]
   className: string
 }
 
@@ -12,14 +13,14 @@ const Carousel = ({ slides, className }: Props) => {
 
   const previousSlide = () => {
     if (current === 0) {
-      setCurrent(slides.length - 1)
+      setCurrent(6)
     } else {
       setCurrent(current - 1)
     }
   }
 
   const nextSlide = () => {
-    if (current === slides.length - 1) {
+    if (current === 6) {
       setCurrent(0)
     } else {
       setCurrent(current + 1)
@@ -50,11 +51,9 @@ const Carousel = ({ slides, className }: Props) => {
         }}
       >
         {slides.map((s, i) => {
-          return (
-            <div key={`image: ${i}`} className="h-90 min-w-90 ">
-              <img className="w-full h-full rounded-2xl" src={s.image} alt="" />
-            </div>
-          )
+          if (i > 0 && i <= 7) {
+            return <Card image={s.poster_path} key={s.id} />
+          }
         })}
       </div>
       <div
@@ -65,12 +64,15 @@ const Carousel = ({ slides, className }: Props) => {
         }}
       ></div>
       <div className="absolute -bottom-1 py-4 flex justify-center gap-2 w-full">
-        {slides.map((s, i) => (
-          <div
-            key={`circle: ${i}`}
-            className={`rounded-full w-2 h-2 ${i == current ? 'bg-red-700' : 'bg-gray-300'}`}
-          ></div>
-        ))}
+        {slides.map((_s, i) => {
+          if (i <= 6)
+            return (
+              <div
+                key={`circle: ${i}`}
+                className={`rounded-full w-2 h-2 ${i == current ? 'bg-red-700' : 'bg-gray-300'}`}
+              ></div>
+            )
+        })}
       </div>
     </div>
   )

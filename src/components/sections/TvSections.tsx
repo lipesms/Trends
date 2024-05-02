@@ -1,13 +1,13 @@
-import Carousel from './Carouseul'
-import Card from './Card'
-import { ResultMovies } from '../services/api'
+import Carousel from '../Carouseul'
+import Card from '../Card'
+import { ResultTv } from '../../services/api'
 
 type Props = {
   title: string
-  dados: ResultMovies[]
+  dados: ResultTv[]
 }
 
-const Section = ({ title, dados }: Props) => {
+const TvSection = ({ title, dados }: Props) => {
   if (!dados) {
     return <h3>Carregando...</h3>
   } else {
@@ -19,11 +19,11 @@ const Section = ({ title, dados }: Props) => {
         <Carousel className="sm:hidden" slides={dados} />
         <div className="hidden w-full sm:grid sm:grid-cols-2 md:grid-cols-3 px-8 xl:grid-cols-5 gap-10 ">
           {dados.map((s, i) => {
-            if (i > 0 && i <= 7) {
+            if (i <= 9) {
               return (
                 <Card
                   key={i}
-                  titulo={s.title}
+                  titulo={s.name}
                   image={s.poster_path}
                   critica={s.vote_average}
                   sinopse={s.overview}
@@ -43,4 +43,4 @@ const Section = ({ title, dados }: Props) => {
   }
 }
 
-export default Section
+export default TvSection
