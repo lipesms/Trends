@@ -14,8 +14,6 @@ const Card = ({ titulo, image, critica, sinopse }: slidesFilmes) => {
       fetch(`https://image.tmdb.org/t/p/w500${image}`).then((resp) =>
         setImg(resp.url)
       )
-    } else {
-      setImg('https://image.tmdb.org/t/p/w500/e8pI4XkYgUMuSJ8cEFbJE18wc4e.jpg')
     }
   }, [image])
 

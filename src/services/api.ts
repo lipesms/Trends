@@ -64,7 +64,7 @@ export type PopularesPerson = {
 
 const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://api.themoviedb.org/3/trending/',
+    baseUrl: 'https://api.themoviedb.org/3',
     prepareHeaders: (headers) => {
       const token =
         'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNWNiYTRiNTNjNTI1M2IxY2I1MmMxZWJkN2QyNDcxZSIsInN1YiI6IjY2MWYwNTMzMjBhZjc3MDE2NDNkYWFlMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sY2t9sNETOYwp97ZJ8YFAKVTJmp306FWb0ZZazvvTuo'
@@ -77,13 +77,13 @@ const api = createApi({
   }),
   endpoints: (builder) => ({
     getPopularMovies: builder.query<Populares, void>({
-      query: () => 'movie/week?language=pt-BR&page=1'
+      query: () => '/trending/movie/day?language=pt-BR&page=1'
     }),
     getPopularTv: builder.query<PopularesTv, void>({
-      query: () => 'tv/week?language=pt-BR'
+      query: () => '/trending/tv/day?language=pt-BR'
     }),
     getPopularPerson: builder.query<PopularesPerson, void>({
-      query: () => 'person/week?language=en-US'
+      query: () => '/trending/person/day?language=en-US'
     })
   })
 })

@@ -19,7 +19,7 @@ const MovieSection = ({ title, dados }: Props) => {
         <Carousel className="sm:hidden" slides={dados} />
         <div className="hidden w-full sm:grid sm:grid-cols-2 md:grid-cols-3 px-8 xl:grid-cols-5 gap-10 ">
           {dados.map((s, i) => {
-            if (i > 0 && i <= 10) {
+            if (i <= 9) {
               return (
                 <Card
                   key={i}
