@@ -83,7 +83,7 @@ const api = createApi({
       query: () => '/trending/tv/day?language=pt-BR'
     }),
     getPopularPerson: builder.query<PopularesPerson, void>({
-      query: () => '/trending/person/day?language=en-US'
+      query: () => '/trending/person/day?language=pt-BR'
     })
   })
 })

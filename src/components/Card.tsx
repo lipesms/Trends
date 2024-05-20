@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 
-export type slidesFilmes = {
+export type CardItems = {
   titulo?: string
   image: string
   sinopse?: string
   critica?: number
+  id: number
 }
 
-const Card = ({ titulo, image, critica, sinopse }: slidesFilmes) => {
+const Card = ({ titulo, image, critica, sinopse }: CardItems) => {
   const [img, setImg] = useState('')
   useEffect(() => {
     if (image) {
@@ -24,6 +25,13 @@ const Card = ({ titulo, image, critica, sinopse }: slidesFilmes) => {
     return text
   }
 
+  const formatTitle = (title: string) => {
+    if (title.length > 13) {
+      return title.slice(0, 13).concat('...')
+    }
+    return title
+  }
+
   return (
     <div className="h-90 min-w-90 sm:h-auto sm:min-w-full md:relative select-none">
       <img src={img} alt="" className="rounded-2xl  w-full h-full " />
@@ -34,7 +42,7 @@ const Card = ({ titulo, image, critica, sinopse }: slidesFilmes) => {
       >
         <div>
           <h2 className="font-display font-bold text-white text-center text-xl pb-4 2xl:text-xl">
-            {titulo}
+            {titulo ? formatTitle(titulo) : ''}
           </h2>
           <div
             className={`flex justify-between items-center ${critica ? 'block' : 'hidden'}`}

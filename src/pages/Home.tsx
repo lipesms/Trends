@@ -14,7 +14,6 @@ const Home = () => {
   const { data: movies } = useGetPopularMoviesQuery()
   const { data: tv } = useGetPopularTvQuery()
   const { data: person } = useGetPopularPersonQuery()
-  console.log(person)
 
   if (!movies || !tv || !person) {
     return <h3>Carregando...</h3>

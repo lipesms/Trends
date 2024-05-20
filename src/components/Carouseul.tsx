@@ -1,9 +1,13 @@
 import { TouchEvent, useState } from 'react'
-import { Result } from '../services/api'
 import Card from './Card'
 
+type carouseultSlide = {
+  image: string
+  id: number
+}
+
 type Props = {
-  slides: Result[]
+  slides: carouseultSlide[]
   className: string
 }
 
@@ -52,7 +56,7 @@ const Carousel = ({ slides, className }: Props) => {
       >
         {slides.map((s, i) => {
           if (i > 0 && i <= 7) {
-            return <Card image={s.poster_path} key={s.id} />
+            return <Card image={s.image} id={s.id} key={s.id} />
           }
         })}
       </div>
