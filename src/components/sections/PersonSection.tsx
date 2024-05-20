@@ -1,7 +1,7 @@
 import Card from '../Card'
 import { ResultPerson } from '../../services/api'
 import { carouseulPersons } from '../../Utils'
-import Carousel from '../Carouseul'
+import Carousel from '../Carousel'
 
 type Props = {
   title: string
