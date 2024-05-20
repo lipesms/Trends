@@ -17,8 +17,9 @@ export const carouseulPersons = (dados: ResultPerson[]) => {
   return dados.map((i) => {
     const image = i.profile_path
     const id = i.id
+    const personName = i.name
 
-    return { image, id }
+    return { image, id, personName }
   })
 
   return slidesCarousel

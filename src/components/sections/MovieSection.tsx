@@ -17,7 +17,11 @@ const MovieSection = ({ title, dados }: Props) => {
         <h2 className="select-none text-2xl font-bold text-white pb-4 lg:ps-8 font-display drop-shadow-3xl lg:text-3xl lg:pb-9">
           {title}
         </h2>
-        <Carousel className="sm:hidden" slides={carouseulTvMovies(dados)} />
+        <Carousel
+          type="tvAndMovie"
+          className="sm:hidden"
+          slides={carouseulTvMovies(dados)}
+        />
         <div className="hidden w-full sm:grid sm:grid-cols-2 md:grid-cols-3 px-8 xl:grid-cols-5 gap-10 ">
           {dados.map((s, i) => {
             if (i <= 9) {

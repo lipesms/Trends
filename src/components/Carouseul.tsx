@@ -4,14 +4,16 @@ import Card from './Card'
 type carouseultSlide = {
   image: string
   id: number
+  personName?: string
 }
 
 type Props = {
   slides: carouseultSlide[]
+  type: 'person' | 'tvAndMovie'
   className: string
 }
 
-const Carousel = ({ slides, className }: Props) => {
+const Carousel = ({ slides, className, type }: Props) => {
   const [current, setCurrent] = useState(0)
   const [firstX, setFirstX] = useState(0)
 
@@ -56,7 +58,17 @@ const Carousel = ({ slides, className }: Props) => {
       >
         {slides.map((s, i) => {
           if (i > 0 && i <= 7) {
-            return <Card image={s.image} id={s.id} key={s.id} />
+            return (
+              <>
+                <Card
+                  image={s.image}
+                  id={s.id}
+                  key={s.id}
+                  titulo={s.personName ? s.personName : ''}
+                  type={type}
+                />
+              </>
+            )
           }
         })}
       </div>

@@ -6,9 +6,16 @@ export type CardItems = {
   sinopse?: string
   critica?: number
   id: number
+  type?: 'person' | 'tvAndMovie'
 }
 
-const Card = ({ titulo, image, critica, sinopse }: CardItems) => {
+const Card = ({
+  titulo,
+  image,
+  critica,
+  sinopse,
+  type = 'tvAndMovie'
+}: CardItems) => {
   const [img, setImg] = useState('')
   useEffect(() => {
     if (image) {
@@ -33,8 +40,17 @@ const Card = ({ titulo, image, critica, sinopse }: CardItems) => {
   }
 
   return (
-    <div className="h-90 min-w-90 sm:h-auto sm:min-w-full md:relative select-none">
+    <div className="h-90 min-w-90 sm:h-auto sm:min-w-full relative select-none">
       <img src={img} alt="" className="rounded-2xl  w-full h-full " />
+      {type === 'person' ? (
+        <div className="absolute bottom-0 left-0 w-full h-1/5 bg-card-person-name">
+          <h2 className="text-center pt-6 text-2xl font-bold text-white ">
+            {titulo}
+          </h2>
+        </div>
+      ) : (
+        <></>
+      )}
 
       {/* Overlay do hover */}
       <div

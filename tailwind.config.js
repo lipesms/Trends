@@ -17,7 +17,8 @@ export default {
       colors: {
         'primary-blue': '#032541',
         'secondary-blue': '#455480',
-        'hover-card-black': 'rgba(0,0,0, 0.7)'
+        'hover-card-black': 'rgba(0,0,0, 0.7)',
+        'card-person-name': 'rgba(0,0,0, 0.5)'
       },
       height: {
         90: '450px'
