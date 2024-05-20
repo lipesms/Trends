@@ -1,4 +1,4 @@
-import Carousel from '../Carouseul'
+import Carousel from '../Carousel'
 import Card from '../Card'
 import { ResultMovies } from '../../services/api'
 import { carouseulTvMovies } from '../../Utils'
