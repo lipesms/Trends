@@ -18,13 +18,16 @@ export default {
         'primary-blue': '#032541',
         'secondary-blue': '#455480',
         'hover-card-black': 'rgba(0,0,0, 0.7)',
-        'card-person-name': 'rgba(0,0,0, 0.5)'
+        'card-person-name': 'rgba(0,0,0, 0.5)',
+        'movie-infos': 'rgba(217,217,217, 0.3)'
       },
       height: {
         90: '450px'
       },
       minWidth: {
-        90: '315px'
+        90: '315px',
+        350: '350px',
+        113: '113px'
       },
       maxWidth: {
         315: '315px',

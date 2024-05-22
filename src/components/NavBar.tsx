@@ -17,7 +17,7 @@ const NavBar = () => {
             className="h-12 md:hidden"
           />
         </a>
-        <div className="flex lg:flex-col lg:mt-8 cursor-pointer lg:mt-4">
+        <div className="flex lg:flex-col lg:items-center lg:mt-8 cursor-pointer lg:mt-4">
           <a className="box-border flex items-center justify-start text-white font-bold ms-2 sm:ms-6 md:inline-block sm:text-xl lg:ms-0 lg:mb-6 pb-1 border-solid border-b-2 border-transparent hover:border-white transition easy-out duration-200">
             Filmes
           </a>

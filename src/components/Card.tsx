@@ -1,3 +1,4 @@
+import { HashLink } from 'react-router-hash-link'
 import { useEffect, useState } from 'react'
 
 export type CardItems = {
@@ -14,9 +15,11 @@ const Card = ({
   image,
   critica,
   sinopse,
-  type = 'tvAndMovie'
+  type = 'tvAndMovie',
+  id
 }: CardItems) => {
   const [img, setImg] = useState('')
+
   useEffect(() => {
     if (image) {
       fetch(`https://image.tmdb.org/t/p/w500${image}`).then((resp) =>
@@ -40,7 +43,10 @@ const Card = ({
   }
 
   return (
-    <div className="h-90 min-w-90 sm:h-auto sm:min-w-full relative select-none">
+    <HashLink
+      to={`/infos/${id}`}
+      className="h-90 min-w-90 sm:h-auto sm:min-w-full relative select-none"
+    >
       <img src={img} alt="" className="rounded-2xl  w-full h-full " />
       {type === 'person' ? (
         <div className="absolute bottom-0 left-0 w-full h-1/5 bg-card-person-name">
@@ -83,7 +89,7 @@ const Card = ({
           </a>
         </div>
       </div>
-    </div>
+    </HashLink>
   )
 }
 

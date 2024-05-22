@@ -62,6 +62,57 @@ export type PopularesPerson = {
   results: ResultPerson[]
 }
 
+type genre = {
+  id: number
+  name: string
+}
+
+type productionCompany = {
+  id: number
+  logo_path: string
+  name: string
+  original_contry: string
+}
+
+type productionContry = {
+  iso_3166_1: string
+  name: string
+}
+
+type spokenLanguage = {
+  english_name: string
+  iso_639_1: string
+  name: string
+}
+
+type Content = {
+  adult: boolean
+  backdrop_path: string
+  budget: number
+  genres: genre[]
+  homepage: string
+  id: number
+  imdb_id: string
+  original_contry: string[]
+  original_language: string
+  original_title: string
+  overview: string
+  popularity: number
+  poster_path: string
+  production_companies: productionCompany[]
+  productions_countries: productionContry[]
+  release_date: string
+  revenue: number
+  runtime: number
+  spoken_languages: spokenLanguage[]
+  status: string
+  tagline: string
+  title: string
+  video: boolean
+  vote_average: number
+  vote_count: number
+}
+
 const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://api.themoviedb.org/3',
@@ -84,6 +135,9 @@ const api = createApi({
     }),
     getPopularPerson: builder.query<PopularesPerson, void>({
       query: () => '/trending/person/day?language=pt-BR'
+    }),
+    getMovie: builder.query<Content, string>({
+      query: (s) => `/movie/${s}?language=pt-BR`
     })
   })
 })
@@ -91,7 +145,8 @@ const api = createApi({
 export const {
   useGetPopularMoviesQuery,
   useGetPopularTvQuery,
-  useGetPopularPersonQuery
+  useGetPopularPersonQuery,
+  useGetMovieQuery
 } = api
 
 export default api

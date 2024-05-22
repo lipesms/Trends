@@ -1,12 +1,15 @@
 import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
 
-import Home from './pages/Home'
 import { store } from './store'
+import AppRoute from './Routes'
 
 function App() {
   return (
     <Provider store={store}>
-      <Home />
+      <BrowserRouter>
+        <AppRoute />
+      </BrowserRouter>
     </Provider>
   )
 }
