@@ -1,4 +1,4 @@
-import Card from '../Card'
+import Card from '../HomeCard'
 import { ResultPerson } from '../../services/api'
 import { carouseulPersons } from '../../Utils'
 import Carousel from '../Carousel'

@@ -1,5 +1,5 @@
-import Card from '../Card'
-import { ResultMovies, ResultTv, ResultPerson } from '../../services/api'
+import Card from './HomeCard'
+import { ResultMovies, ResultTv, ResultPerson } from '../services/api'
 
 type Props = {
   title: string
@@ -8,7 +8,7 @@ type Props = {
   link: string
 }
 
-const MovieSection = ({ title, dados, link, type = 'tvAndMovie' }: Props) => {
+const HomeSection = ({ title, dados, link, type = 'tvAndMovie' }: Props) => {
   if (!dados) {
     return <h3>Carregando...</h3>
   } else {
@@ -43,4 +43,4 @@ const MovieSection = ({ title, dados, link, type = 'tvAndMovie' }: Props) => {
   }
 }
 
-export default MovieSection
+export default HomeSection

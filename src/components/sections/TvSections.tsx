@@ -1,5 +1,5 @@
 import Carousel from '../Carousel'
-import Card from '../Card'
+import Card from '../HomeCard'
 import { ResultTv } from '../../services/api'
 import { carouseulTvMovies } from '../../Utils'
 

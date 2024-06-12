@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 
 type propsFilmsCard = {
   poster_path: string
-  title: string
+  title?: string
+  name?: string
   overview: string
   backdrop_path: string
+  vote_average: number
   id: number
   odd: boolean
 }
@@ -13,7 +15,9 @@ type propsFilmsCard = {
 const FilmsCard = ({
   poster_path,
   title,
+  name,
   overview,
+  vote_average,
   id,
   backdrop_path,
   odd
@@ -78,7 +82,7 @@ const FilmsCard = ({
         </div>
         <Link to={`/infos/${id}`} className="flex flex-col p-2 justify-between">
           <h3 className="text-xl font-bold lg:text-white lg:text-4xl ">
-            {title}
+            {title ? title : name}
           </h3>
           <div>
             <h4 className="text-xl lg:text-white lg:text-3xl pt-3 pb-6 ">
@@ -99,7 +103,7 @@ const FilmsCard = ({
         </Link>
         <span className="hidden absolute -top-4 right-4 lg:top-4 lg:right-8 gap-4 justify-center pt-6 font-bold lg:justify-start lg:pt-4 lg:flex">
           <p className="text-xl border-2 border-green-500 py-4 px-2 rounded-full font-bold lg:text-white lg:text-lg lg:py-3">
-            83%
+            {`${vote_average}%`}
           </p>
         </span>
         <div className="hidden -z-9 w-full h-full absolute top-0 left-0 bg-hover-card-black rounded-3xl lg:block"></div>

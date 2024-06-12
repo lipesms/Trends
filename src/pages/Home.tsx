@@ -1,5 +1,5 @@
 import Loader from '../components/Loader'
-import MovieSection from '../components/sections/MovieSection'
+import HomeSection from '../components/HomeSection'
 import Footer from '../components/Footer'
 import {
   useGetPopularMoviesQuery,
@@ -25,24 +25,23 @@ const Home = () => {
               hollywood.
             </p>
           </div>
-          <MovieSection
+          <HomeSection
             title="Filmes em destaque hoje"
             dados={movies.results}
             link="/films"
           />
-          <MovieSection
+          <HomeSection
             title="Séries populares do dia"
             dados={tv.results}
             link="/series"
           />
-          <MovieSection
+          <HomeSection
             title="Famosos do momento"
             dados={person!.results}
             type="person"
             link="/persons"
           />
         </div>
-        <Footer />
       </div>
     )
   }

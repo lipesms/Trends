@@ -1,10 +1,10 @@
 import FilmsCard from '../components/FilmCards'
-import { useGetPopularMoviesQuery } from '../services/api'
+import { useGetPopularTvQuery } from '../services/api'
 
-const Films = () => {
-  const { data: movies } = useGetPopularMoviesQuery()
+const TvSeries = () => {
+  const { data: series } = useGetPopularTvQuery()
 
-  if (movies) {
+  if (series) {
     return (
       <div className="w-100 pt-24 px-8 flex flex-col lg:ps-40 lg:w-full lg:items-start lg:pt-10">
         <div className="pt-8 lg:ps-14 lg:pt-4 min-w-full">
@@ -12,17 +12,17 @@ const Films = () => {
             Filmes em destaque hoje!
           </h2>
           <div className="pt-9 lg:pt-10">
-            {movies.results.map((movie, i) => {
+            {series.results.map((serie, i) => {
               if (i >= 0 && i <= 9) {
                 return (
                   <FilmsCard
-                    key={movie.id}
-                    id={movie.id}
-                    title={movie.title}
-                    overview={movie.overview}
-                    poster_path={movie.poster_path}
-                    backdrop_path={movie.backdrop_path}
-                    vote_average={Math.round(movie.vote_average * 10)}
+                    key={serie.id}
+                    id={serie.id}
+                    title={serie.name}
+                    overview={serie.overview}
+                    poster_path={serie.poster_path}
+                    backdrop_path={serie.backdrop_path}
+                    vote_average={Math.round(serie.vote_average * 10)}
                     odd={i % 2 != 0}
                   />
                 )
@@ -35,4 +35,4 @@ const Films = () => {
   }
 }
 
-export default Films
+export default TvSeries

@@ -7,7 +7,6 @@ const Infos = () => (
     <NavBar />
     <div className="pt-24 lg:ps-36 lg:pt-0">
       <InfosPage></InfosPage>
-      <Footer />
     </div>
   </div>
 )

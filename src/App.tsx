@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { store } from './store'
 import AppRoute from './Routes'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <NavBar />
         <AppRoute />
         <div className="-z-10 w-full h-full fixed top-0 left-0 bg-body"></div>
+        <Footer />
       </BrowserRouter>
     </Provider>
   )

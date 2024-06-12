@@ -8,7 +8,7 @@ export type CardItems = {
   type?: 'person' | 'tvAndMovie'
 }
 
-const Card = ({ titulo, image, type = 'tvAndMovie', id }: CardItems) => {
+const HomeCard = ({ titulo, image, type = 'tvAndMovie', id }: CardItems) => {
   const [img, setImg] = useState('')
 
   useEffect(() => {
@@ -84,4 +84,4 @@ const Card = ({ titulo, image, type = 'tvAndMovie', id }: CardItems) => {
   )
 }
 
-export default Card
+export default HomeCard

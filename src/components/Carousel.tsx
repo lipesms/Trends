@@ -1,5 +1,5 @@
 import { TouchEvent, useState } from 'react'
-import Card from './Card'
+import HomeCard from './HomeCard'
 
 type carouseultSlide = {
   image: string
@@ -59,7 +59,7 @@ const Carousel = ({ slides, className, type }: Props) => {
         {slides.map((s, i) => {
           if (i >= 0 && i <= 7) {
             return (
-              <Card
+              <HomeCard
                 image={s.image}
                 key={i}
                 id={s.id}
