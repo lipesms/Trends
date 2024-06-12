@@ -1,4 +1,4 @@
-import FilmsCard from '../components/FilmCards'
+import TvAndMovieCard from '../components/TvAndMovie'
 import { useGetPopularTvQuery } from '../services/api'
 
 const TvSeries = () => {
@@ -15,7 +15,7 @@ const TvSeries = () => {
             {series.results.map((serie, i) => {
               if (i >= 0 && i <= 9) {
                 return (
-                  <FilmsCard
+                  <TvAndMovieCard
                     key={serie.id}
                     id={serie.id}
                     title={serie.name}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-type propsFilmsCard = {
+type propsTvAndMovieCard = {
   poster_path: string
   title?: string
   name?: string
@@ -12,7 +12,7 @@ type propsFilmsCard = {
   odd: boolean
 }
 
-const FilmsCard = ({
+const TvAndMovieCard = ({
   poster_path,
   title,
   name,
@@ -21,7 +21,7 @@ const FilmsCard = ({
   id,
   backdrop_path,
   odd
-}: propsFilmsCard) => {
+}: propsTvAndMovieCard) => {
   const [img, setImg] = useState('')
   const [backdrop, setBackdrop] = useState('')
 
@@ -116,4 +116,4 @@ const FilmsCard = ({
   )
 }
 
-export default FilmsCard
+export default TvAndMovieCard
