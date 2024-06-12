@@ -35,14 +35,7 @@ const InfosPage = () => {
             <p className="pt-4 hidden lg:block lg:pt-2 font-bold">
               {`${data.release_date} - ${data.genres.map((genre) => ` ${genre.name}`)} - ${data.runtime}mins`}
             </p>
-            <span className="flex gap-4 justify-center pt-6 font-bold lg:justify-start lg:pt-4">
-              <p className="text-xl border-2 border-green-500 py-4 px-2 rounded-full font-bold lg:text-lg lg:py-3">
-                {`${Math.round(data.vote_average * 10)}%`}
-              </p>
-              <p className="text-xl max-w-32 lg:text-lg">
-                Classificação dos usuários
-              </p>
-            </span>
+
             <ul className="flex justify-between order-last gap-x-6 gap-y-3 flex-wrap p-4 mt-8 max-w-md bg-movie-infos rounded-3xl lg:mt-4 lg:justify-start lg:order-none">
               <li className="min-w-113">
                 <h6 className="font-bold">Titulo original</h6>

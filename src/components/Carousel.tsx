@@ -57,17 +57,15 @@ const Carousel = ({ slides, className, type }: Props) => {
         }}
       >
         {slides.map((s, i) => {
-          if (i > 0 && i <= 7) {
+          if (i >= 0 && i <= 7) {
             return (
-              <>
-                <Card
-                  image={s.image}
-                  id={s.id}
-                  key={s.id}
-                  titulo={s.personName ? s.personName : ''}
-                  type={type}
-                />
-              </>
+              <Card
+                image={s.image}
+                key={i}
+                id={s.id}
+                titulo={s.personName ? s.personName : ''}
+                type={type}
+              />
             )
           }
         })}

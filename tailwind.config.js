@@ -3,10 +3,14 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      display: ['Roboto']
+      display: ['Roboto'],
+      jockey: ['Jockey One']
     },
 
     extend: {
+      zIndex: {
+        9: '9'
+      },
       gridTemplateColumns: {
         // Simple 16 column grid
         16: '160px minmax(0, 1fr)',
@@ -15,7 +19,7 @@ export default {
         footer: '200px minmax(900px, 1fr) 100px'
       },
       colors: {
-        'primary-blue': '#032541',
+        'primary-color': 'rgba(249, 249, 250, 0.87)',
         'secondary-blue': '#455480',
         'hover-card-black': 'rgba(0,0,0, 0.7)',
         'card-person-name': 'rgba(0,0,0, 0.5)',
@@ -38,7 +42,8 @@ export default {
       },
       backgroundImage: {
         'body-pattern':
-          "url('https://lipesms.github.io/Trends//src/assets/images/background_home.png')"
+          "url('https://lipesms.github.io/Trends//src/assets/images/background_home.png')",
+        body: "url('./src/assets/images/background_home.png')"
       }
     }
   },

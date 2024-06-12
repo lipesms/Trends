@@ -15,6 +15,8 @@ export type ResultMovies = {
   video: boolean
   vote_average: number
   vote_count: number
+  name?: string
+  profile_path?: string
 }
 
 export type ResultTv = {
@@ -33,6 +35,7 @@ export type ResultTv = {
   poster_path: string
   vote_average: number
   vote_count: number
+  profile_path?: string
 }
 
 export type ResultPerson = {
@@ -46,6 +49,7 @@ export type ResultPerson = {
   original_name: string
   popularity: number
   profile_path: string
+  poster_path?: string
 }
 
 export type Populares = {
