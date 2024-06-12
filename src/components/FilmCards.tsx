@@ -76,7 +76,7 @@ const FilmsCard = ({
             className={` ${odd ? 'rounded-ee-2xl' : 'rounded-es-2xl'}  lg:rounded-2xl w-full`}
           />
         </div>
-        <Link to={'/'} className="flex flex-col p-2 justify-between">
+        <Link to={`/infos/${id}`} className="flex flex-col p-2 justify-between">
           <h3 className="text-xl font-bold lg:text-white lg:text-4xl ">
             {title}
           </h3>
