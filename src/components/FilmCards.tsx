@@ -49,8 +49,8 @@ const FilmsCard = ({
   const formatSinopse = (text: string, width: 'small' | 'medium' | 'large') => {
     switch (width) {
       case 'small':
-        if (text.length > 129) {
-          return text.slice(0, 129).concat('...')
+        if (text.length > 70) {
+          return text.slice(0, 70).concat('...')
         }
         return text
       case 'medium':
