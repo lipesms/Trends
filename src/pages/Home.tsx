@@ -1,6 +1,6 @@
 import Loader from '../components/Loader'
 import HomeSection from '../components/HomeSection'
-import Footer from '../components/Footer'
+
 import {
   useGetPopularMoviesQuery,
   useGetPopularPersonQuery,
@@ -39,7 +39,7 @@ const Home = () => {
             title="Famosos do momento"
             dados={person!.results}
             type="person"
-            link="/persons"
+            link="/famous"
           />
         </div>
       </div>

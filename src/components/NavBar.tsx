@@ -37,7 +37,7 @@ const NavBar = () => {
             Séries
           </a>
           <a
-            href="/persons"
+            href="/famous"
             className="flex items-center justify-start text-black font-bold  ms-2 sm:ms-6 md:inline-block sm:text-xl lg:ms-0 lg:mb-6 pb-1 border-solid border-b-2 border-transparent hover:border-black transition easy-out duration-200"
           >
             Famosos

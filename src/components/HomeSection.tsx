@@ -1,4 +1,4 @@
-import Card from './HomeCard'
+import HomeCard from './HomeCard'
 import { ResultMovies, ResultTv, ResultPerson } from '../services/api'
 
 type Props = {
@@ -21,7 +21,7 @@ const HomeSection = ({ title, dados, link, type = 'tvAndMovie' }: Props) => {
           {dados.map((s, i) => {
             if (i <= 5) {
               return (
-                <Card
+                <HomeCard
                   type={type}
                   key={i}
                   id={s.id}

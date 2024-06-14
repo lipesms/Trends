@@ -16,8 +16,6 @@ const HomeCard = ({ titulo, image, type = 'tvAndMovie', id }: CardItems) => {
       fetch(`https://image.tmdb.org/t/p/w500${image}`).then((resp) =>
         setImg(resp.url)
       )
-    } else {
-      fetch('https://placehold.co/280x500').then((resp) => setImg(resp.url))
     }
   }, [image])
 
@@ -40,9 +38,9 @@ const HomeCard = ({ titulo, image, type = 'tvAndMovie', id }: CardItems) => {
       to={`/infos/${id}`}
       className="relative max-w-50 sm:h-auto sm:min-w-full relative select-none drop-shadow-xl hover:drop-shadow-2xl "
     >
-      <img src={img} alt="" className="rounded-2xl  w-full h-full " />
+      <img src={img} alt="" className="rounded-2xl  w-full" />
       {type === 'person' ? (
-        <div className="absolute bottom-0 left-0 py-4 w-full h-1/4 bg-card-person-name">
+        <div className="absolute bottom-0 left-0 py-4 w-full  bg-card-person-name rounded-b-2xl">
           <p className="text-center text-lg font-bold text-white">{titulo}</p>
         </div>
       ) : (

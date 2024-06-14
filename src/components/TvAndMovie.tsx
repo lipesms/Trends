@@ -50,7 +50,7 @@ const TvAndMovieCard = ({
     switch (width) {
       case 'small':
         if (text.length > 70) {
-          return text.slice(0, 70).concat('...')
+          return text.slice(0, 65).concat('...')
         }
         return text
       case 'medium':

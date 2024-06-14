@@ -42,7 +42,7 @@ export type ResultPerson = {
   adult: boolean
   gender: number
   id: number
-  known_for: string[]
+  known_for: KnowFor[]
   known_for_department: string
   media_type: string
   name: string
@@ -50,6 +50,25 @@ export type ResultPerson = {
   popularity: number
   profile_path: string
   poster_path?: string
+}
+
+export type KnowFor = {
+  backdrop_path: string
+  id: number
+  original_title?: string
+  name?: string
+  overview: string
+  poster_path: string
+  media_type: string
+  adult: boolean
+  title: string
+  original_language: string
+  genre_ids: number[]
+  popularity: number
+  release_date: string
+  video: boolean
+  vote_average: number
+  vote_count: number
 }
 
 export type Populares = {
