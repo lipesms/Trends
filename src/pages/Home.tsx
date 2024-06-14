@@ -28,18 +28,18 @@ const Home = () => {
           <HomeSection
             title="Filmes em destaque hoje"
             dados={movies.results}
-            link="/films"
+            link="films"
           />
           <HomeSection
             title="Séries populares do dia"
             dados={tv.results}
-            link="/series"
+            link="series"
           />
           <HomeSection
             title="Famosos do momento"
             dados={person!.results}
             type="person"
-            link="/famous"
+            link="famous"
           />
         </div>
       </div>
