@@ -32,9 +32,9 @@ const HomeCard = ({
   return (
     <Link
       to={`/films/${id}`}
-      className="relative max-w-50 sm:h-auto sm:min-w-full relative select-none drop-shadow-xl hover:drop-shadow-2xl "
+      className="relative w-full relative select-none drop-shadow-xl hover:drop-shadow-2xl "
     >
-      <img src={img} alt="" className="rounded-2xl  w-full" />
+      <img src={img} alt="" className="rounded-2xl w-full" />
       {type === 'person' ? (
         <div className="absolute bottom-0 left-0 py-4 w-full  bg-card-person-name rounded-b-2xl">
           <p className="text-center text-lg font-bold text-white">{titulo}</p>
