@@ -1,7 +1,7 @@
 import { PulseLoader } from 'react-spinners'
 
 const Loader = () => (
-  <div className="min-h-screen flex justify-center items-center">
+  <div className="min-h-screen w-full flex justify-center items-center">
     <PulseLoader color="#000" />
   </div>
 )

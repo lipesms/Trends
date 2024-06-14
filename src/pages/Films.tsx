@@ -1,3 +1,4 @@
+import Loader from '../components/Loader'
 import TvAndMovieCard from '../components/TvAndMovie'
 import { useGetPopularMoviesQuery } from '../services/api'
 
@@ -33,6 +34,7 @@ const Films = () => {
       </div>
     )
   }
+  return <Loader />
 }
 
 export default Films

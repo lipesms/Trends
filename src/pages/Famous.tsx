@@ -1,4 +1,5 @@
 import FamousList from '../components/FamousList'
+import Loader from '../components/Loader'
 import { useGetPopularPersonQuery } from '../services/api'
 
 const Famous = () => {
@@ -9,7 +10,7 @@ const Famous = () => {
       <div className="w-100 pt-24 px-8 flex flex-col lg:ps-40 lg:w-full lg:items-start lg:pt-10">
         <div className="pt-8 lg:ps-14 lg:pt-4 min-w-full">
           <h2 className="text-4xl font-bold text-center lg:text-start font-display">
-            Filmes em destaque hoje!
+            Famosos do momento
           </h2>
           <div className="pt-9 lg:pt-10">
             {famous.results.map((person, i) => {
@@ -31,6 +32,7 @@ const Famous = () => {
       </div>
     )
   }
+  return <Loader />
 }
 
 export default Famous

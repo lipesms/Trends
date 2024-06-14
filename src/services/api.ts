@@ -85,7 +85,7 @@ export type PopularesPerson = {
   results: ResultPerson[]
 }
 
-type genre = {
+export type genre = {
   id: number
   name: string
 }
@@ -136,6 +136,26 @@ type Content = {
   vote_count: number
 }
 
+type Cast = {
+  adult: boolean
+  gender: number
+  id: number
+  know_for_department: string
+  name: string
+  original_name: string
+  popularity: number
+  profile_path: string
+  cast_id: number
+  character: string
+  credit_id: string
+  order: number
+}
+
+type ResultCredits = {
+  id: number
+  cast: Cast[]
+}
+
 const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://api.themoviedb.org/3',
@@ -161,6 +181,9 @@ const api = createApi({
     }),
     getMovie: builder.query<Content, string>({
       query: (s) => `/movie/${s}?language=pt-BR`
+    }),
+    getMovieCredits: builder.query<ResultCredits, string>({
+      query: (s) => `/movie/${s}/credits?language=pt-BR`
     })
   })
 })
@@ -169,7 +192,8 @@ export const {
   useGetPopularMoviesQuery,
   useGetPopularTvQuery,
   useGetPopularPersonQuery,
-  useGetMovieQuery
+  useGetMovieQuery,
+  useGetMovieCreditsQuery
 } = api
 
 export default api

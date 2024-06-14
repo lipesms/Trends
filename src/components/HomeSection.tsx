@@ -27,6 +27,7 @@ const HomeSection = ({ title, dados, link, type = 'tvAndMovie' }: Props) => {
                   id={s.id}
                   titulo={s.name ? s.name : ''}
                   image={s.poster_path ? s.poster_path : s.profile_path}
+                  link={link}
                 />
               )
             }

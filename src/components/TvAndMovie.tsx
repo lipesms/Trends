@@ -68,7 +68,8 @@ const TvAndMovieCard = ({
 
   return (
     <>
-      <div
+      <Link
+        to={`/films/${id}`}
         className={`z-10 relative flex w-full font-jockey bg-white ${odd ? 'rounded-ss-2xl ' : 'rounded-es-2xl rounded-se-2xl'} mb-8 lg:gap-8 lg:p-8 lg:rounded-2xl`}
       >
         <div
@@ -80,7 +81,7 @@ const TvAndMovieCard = ({
             className={` ${odd ? 'rounded-ee-2xl' : 'rounded-es-2xl'}  lg:rounded-2xl w-full`}
           />
         </div>
-        <Link to={`/infos/${id}`} className="flex flex-col p-2 justify-between">
+        <div className="flex flex-col p-2 justify-between">
           <h3 className="text-xl font-bold lg:text-white lg:text-4xl ">
             {title ? title : name}
           </h3>
@@ -100,7 +101,7 @@ const TvAndMovieCard = ({
               </>
             </span>
           </div>
-        </Link>
+        </div>
         <span className="hidden absolute -top-4 right-4 lg:top-4 lg:right-8 gap-4 justify-center pt-6 font-bold lg:justify-start lg:pt-4 lg:flex">
           <p className="text-xl border-2 border-green-500 py-4 px-2 rounded-full font-bold lg:text-white lg:text-lg lg:py-3">
             {`${vote_average}%`}
@@ -111,7 +112,7 @@ const TvAndMovieCard = ({
           src={backdrop}
           className="hidden -z-10 w-full h-full absolute top-0 left-0 bg-body object-cover rounded-3xl lg:block"
         ></img>
-      </div>
+      </Link>
     </>
   )
 }

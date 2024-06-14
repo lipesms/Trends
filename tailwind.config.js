@@ -28,6 +28,9 @@ export default {
       height: {
         90: '450px'
       },
+      maxHeight: {
+        520: '520px'
+      },
       minWidth: {
         90: '315px',
         350: '350px',
@@ -35,7 +38,8 @@ export default {
       },
       maxWidth: {
         315: '315px',
-        618: '618px'
+        618: '618px',
+        50: '50%'
       },
       dropShadow: {
         '3xl': '0 10px 16px #fff2'

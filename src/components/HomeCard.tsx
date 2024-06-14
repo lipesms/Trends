@@ -31,7 +31,7 @@ const HomeCard = ({
 
   return (
     <Link
-      to={`/${link}/${id}`}
+      to={`/films/${id}`}
       className="relative max-w-50 sm:h-auto sm:min-w-full relative select-none drop-shadow-xl hover:drop-shadow-2xl "
     >
       <img src={img} alt="" className="rounded-2xl  w-full" />

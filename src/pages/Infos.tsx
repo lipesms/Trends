@@ -1,13 +1,8 @@
-import Footer from '../components/Footer'
 import InfosPage from '../components/InfosPage'
-import NavBar from '../components/NavBar'
 
 const Infos = () => (
-  <div className="flex flex-col relative">
-    <NavBar />
-    <div className="pt-24 lg:ps-36 lg:pt-0">
-      <InfosPage></InfosPage>
-    </div>
+  <div className="h-full pt-24 flex flex-col lg:ps-40 lg:w-full  lg:items-start lg:pt-10 font-display">
+    <InfosPage></InfosPage>
   </div>
 )
 
