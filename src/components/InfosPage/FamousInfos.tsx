@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
 import personPlaceholder from '../../assets/images/placeholder_person.png'
-import { MoviesCast, TvCast } from '../../services/api'
 import CastCard from '../CastCard'
+import { checkPopularMovieItems, checkPopularTvItems } from '../../Utils'
 
 type FamousInfoProps = {
   profile_path: string
@@ -29,6 +29,8 @@ const FamousInfos = ({
 }: FamousInfoProps) => {
   const [image, setImage] = useState('')
   const [backdrop, setBackdrop] = useState('')
+  const movies = checkPopularMovieItems(moviesCast)
+  const series = checkPopularTvItems(tvCast)
 
   useEffect(() => {
     if (profile_path) {
@@ -58,22 +60,22 @@ const FamousInfos = ({
             className="max-h-60 h-full xl:min-w-82 xl:max-w-96 xl:w-full xl:max-h-520 xl:rounded-2xl"
           />
         </div>
-        <div className="flex flex-col items-center pt-4 px-8 xl:items-start">
-          <h2 className="text-4xl">{name}</h2>
-          <div className="pt-8 text-xl xl:order-2">
+        <div className="flex flex-col items-center pt-4 px-8 lg:items-start xl:items-start">
+          <h2 className="text-4xl font-bold self-center">{name}</h2>
+          <div className="pt-8 text-xl lg:order-2">
             <h4 className="text-2xl pt-4">Biografia</h4>
             <p className="pt-4">
               {biography != '' ? biography : 'Não informado'}
             </p>
           </div>
-          <section className="flex flex-wrap justify-between mt-10 p-4 bg-white rounded-2xl gap-8 xl:order-1 xl:max-w-50 xl:bg-movie-infos">
-            <span className="flex flex-col inline-block">
-              <h6 className="text-center">Aniversário</h6>
-              <p className="text-center">{birthday}</p>
-            </span>
+          <section className="flex flex-wrap justify-between mt-10 p-4 bg-white rounded-2xl gap-8 lg:order-1 xl:bg-movie-infos xl:self-start">
             <span>
               <h6 className="text-center">Nascimento</h6>
               <p className="text-center">{place_of_birth}</p>
+            </span>
+            <span className="flex flex-col inline-block">
+              <h6 className="text-center">Aniversário</h6>
+              <p className="text-center">{birthday}</p>
             </span>
             {deathday ? (
               <span>
@@ -92,12 +94,12 @@ const FamousInfos = ({
         />
         <div className="-z-9 w-full max-h-72 h-full absolute top-0 left-0 bg-hover-card-black xl:rounded-3xl xl:block xl:max-h-none"></div>
       </div>
-      <div className="pt-8">
+      <div className="pt-8 px-8">
         <h3 className="text-2xl font-bold pb-4 px-8 lg:px-0">
           Principais filmes
         </h3>
         <div className="flex flex-wrap px-8 gap-4 justify-around sm:justify-center md:justify-start lg:px-0">
-          {moviesCast.map((movie, i) => {
+          {movies.map((movie, i) => {
             if (i <= 7) {
               return (
                 <CastCard
@@ -113,12 +115,12 @@ const FamousInfos = ({
         </div>
       </div>
       {tvCast[0] ? (
-        <div className="pt-8">
+        <div className="pt-8 px-8">
           <h3 className="text-2xl font-bold pb-4 px-8 lg:px-0">
             Principais séries
           </h3>
           <div className="flex flex-wrap px-8 gap-4 justify-around sm:justify-center md:justify-start lg:px-0">
-            {tvCast.map((Serie, i) => {
+            {series.map((Serie, i) => {
               if (i <= 7) {
                 return (
                   <CastCard

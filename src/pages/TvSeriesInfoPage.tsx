@@ -12,7 +12,7 @@ const TvSeriesInfoPage = () => {
 
   if (data && cast) {
     return (
-      <div className="h-full pt-24 flex flex-col lg:ps-40 lg:w-full  lg:items-start lg:pt-10 font-display select-none">
+      <div className="h-full pt-24 flex flex-col font-display select-none lg:w-full  lg:items-start xl:pt-10 xl:ps-40">
         <TvAndMovieInfos
           backdrop_path={data.backdrop_path}
           genres={data.genres}
@@ -25,7 +25,7 @@ const TvSeriesInfoPage = () => {
           status={data.status}
           tagline={data.tagline}
           title={data.name}
-          vote_average={data.vote_average}
+          vote_average={Math.round(data.vote_average * 10)}
           seasons={data.number_of_seasons}
           cast={cast.cast}
         />

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { setVoteAverageColor } from '../Utils'
 
 type propsTvAndMovieCard = {
   poster_path: string
@@ -105,7 +106,9 @@ const TvAndMovieCard = ({
           </div>
         </div>
         <span className="hidden absolute -top-4 right-4 lg:top-4 lg:right-8 gap-4 justify-center pt-6 font-bold lg:justify-start lg:pt-4 lg:flex">
-          <p className="text-xl border-2 border-green-500 py-4 px-2 rounded-full font-bold lg:text-white lg:text-lg lg:py-3">
+          <p
+            className={`text-xl border-2 ${setVoteAverageColor(vote_average)} py-4 px-2 rounded-full font-bold lg:text-white lg:text-lg lg:py-3`}
+          >
             {`${vote_average}%`}
           </p>
         </span>

@@ -12,7 +12,7 @@ const MovieInfosPage = () => {
 
   if (data && credits) {
     return (
-      <div className="h-full pt-24 flex flex-col lg:ps-40 lg:w-full  lg:items-start lg:pt-10 font-display select-none">
+      <div className="h-full pt-24 flex flex-col font-display select-none xl:ps-40 xl:w-full  xl:items-start xl:pt-10">
         <TvAndMovieInfos
           backdrop_path={data.backdrop_path}
           budget={data.budget}
@@ -27,7 +27,7 @@ const MovieInfosPage = () => {
           status={data.status}
           tagline={data.tagline}
           title={data.title}
-          vote_average={data.vote_average}
+          vote_average={Math.round(data.vote_average * 10)}
           cast={credits.cast}
         />
       </div>

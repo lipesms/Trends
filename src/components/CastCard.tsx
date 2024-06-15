@@ -30,9 +30,13 @@ const CastCard = ({
     }
   }, [profile_path])
   return (
-    <Link to={`/${link}/${id}`} className="relative max-w-32  xl:max-w-48">
-      <img src={image} alt="" className="rounded-t-xl w-full max-h-50" />
-      {name && character ? (
+    <Link to={`/${link}/${id}`} className="relative">
+      <img
+        src={image}
+        alt=""
+        className="rounded-t-xl min-w-36 max-w-36 min-h-52 max-h-52"
+      />
+      {name || character ? (
         <div className="flex flex-col justify-around text-xs absolute bottom-0 left-0 py-1 w-full min-h-16 bg-card-person-name xl:text-sm">
           <p className="text-center font-bold text-white">{name}</p>
           <p className="text-center font-bold pt-2 text-white">{character}</p>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { KnowFor } from '../services/api'
 
 import placeholder from '../assets/images/placeholder_person.png'
 

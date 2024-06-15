@@ -15,12 +15,12 @@ const Home = () => {
   if (movies && tv && person) {
     return (
       <div>
-        <div className="pt-24 px-8 flex flex-col lg:ps-40 lg:w-full lg:items-start lg:pt-10 font-display select-none">
-          <div className="pt-4 lg:ps-14">
-            <h2 className="text-3xl font-bold text-center lg:text-start lg:text-5xl">
+        <div className="pt-24 px-8 flex flex-col font-display select-none lg:w-full lg:items-start xl:ps-40 xl:pt-10">
+          <div className="w-full pt-8 xl:ps-14">
+            <h2 className="text-3xl font-bold text-center xl:text-5xl xl:text-start">
               Bem-vindo!
             </h2>
-            <p className="text-2xl text-center pt-4 lg:text-start lg:text-3xl">
+            <p className="text-2xl text-center pt-4 xl:text-3xl xl:text-start">
               Acompanhe as tendências dos filmes, séries e estrelas de
               hollywood.
             </p>

@@ -17,7 +17,7 @@ const FamousInfosPage = () => {
 
   if (data && movieCredits && tvCredits) {
     return (
-      <div className="h-full pt-24 flex flex-col lg:ps-40 lg:w-full  lg:items-start lg:pt-10 font-display select-none">
+      <div className="h-full pt-24 flex flex-col font-display select-none xl:ps-40 xl:w-full xl:items-start xl:pt-10">
         <FamousInfos
           biography={data.biography}
           birthday={data.birthday}
