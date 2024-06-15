@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import placeholderPerson from '../assets/images/placeholder_person.png'
+import placeholderImage from '../assets/images/placeholder_image.png'
 
 type CastCardProps = {
   id: number
@@ -26,7 +26,7 @@ const CastCard = ({
         setImage(resp.url)
       )
     } else {
-      setImage(placeholderPerson)
+      setImage(placeholderImage)
     }
   }, [profile_path])
   return (
