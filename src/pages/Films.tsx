@@ -25,6 +25,7 @@ const Films = () => {
                     backdrop_path={movie.backdrop_path}
                     vote_average={Math.round(movie.vote_average * 10)}
                     odd={i % 2 != 0}
+                    link="films"
                   />
                 )
               }

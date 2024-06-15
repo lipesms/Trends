@@ -10,6 +10,7 @@ type propsTvAndMovieCard = {
   vote_average: number
   id: number
   odd: boolean
+  link: string
 }
 
 const TvAndMovieCard = ({
@@ -20,7 +21,8 @@ const TvAndMovieCard = ({
   vote_average,
   id,
   backdrop_path,
-  odd
+  odd,
+  link
 }: propsTvAndMovieCard) => {
   const [img, setImg] = useState('')
   const [backdrop, setBackdrop] = useState('')
@@ -69,7 +71,7 @@ const TvAndMovieCard = ({
   return (
     <>
       <Link
-        to={`/films/${id}`}
+        to={`/${link}/${id}`}
         className={`z-10 relative flex w-full font-jockey bg-white ${odd ? 'rounded-ss-2xl ' : 'rounded-es-2xl rounded-se-2xl'} mb-8 lg:gap-8 lg:p-8 lg:rounded-2xl`}
       >
         <div

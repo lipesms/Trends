@@ -53,7 +53,7 @@ const FamousList = ({
   return (
     <>
       <Link
-        to={`/infos/${id}`}
+        to={`/famous/${id}`}
         className={`z-10 relative flex justify-between w-full font-jockey bg-white ${odd ? 'rounded-ss-2xl ' : 'rounded-es-2xl rounded-se-2xl'} mb-8 lg:gap-8 lg:p-8 lg:rounded-2xl`}
       >
         <div

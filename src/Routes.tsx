@@ -6,6 +6,7 @@ import TvSeries from './pages/TvSeries'
 import Famous from './pages/Famous'
 import MovieInfosPage from './pages/MovieInfosPage'
 import TvSeriesInfoPage from './pages/TvSeriesInfoPage'
+import FamousInfosPage from './pages/FamousInfoPage'
 
 const AppRoute = () => (
   <Routes>
@@ -15,6 +16,7 @@ const AppRoute = () => (
     <Route path="/famous" element={<Famous />}></Route>
     <Route path="/films/:id" element={<MovieInfosPage />}></Route>
     <Route path="/series/:id" element={<TvSeriesInfoPage />}></Route>
+    <Route path="/famous/:id" element={<FamousInfosPage />}></Route>
   </Routes>
 )
 

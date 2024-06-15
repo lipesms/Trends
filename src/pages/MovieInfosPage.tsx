@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 
-import MovieInfos from '../components/InfosPage/MovieInfos'
+import TvAndMovieInfos from '../components/InfosPage/TvAndMovieInfos'
 
 import { useGetMovieCreditsQuery, useGetMovieQuery } from './../services/api'
 import Loader from '../components/Loader'
@@ -13,7 +13,7 @@ const MovieInfosPage = () => {
   if (data && credits) {
     return (
       <div className="h-full pt-24 flex flex-col lg:ps-40 lg:w-full  lg:items-start lg:pt-10 font-display">
-        <MovieInfos
+        <TvAndMovieInfos
           backdrop_path={data.backdrop_path}
           budget={data.budget}
           genres={data.genres}

@@ -4,7 +4,7 @@ import { Cast, genre } from '../../services/api'
 import { useEffect, useState } from 'react'
 import CastCard from '../CastCard'
 
-type TvAndMovieInfos = {
+type TvAndMovieInfosProps = {
   poster_path: string
   backdrop_path: string
   genres: genre[]
@@ -23,7 +23,7 @@ type TvAndMovieInfos = {
   cast: Cast[]
 }
 
-const MovieInfos = ({
+const TvAndMovieInfos = ({
   poster_path,
   backdrop_path,
   genres,
@@ -40,7 +40,7 @@ const MovieInfos = ({
   budget,
   seasons,
   cast
-}: TvAndMovieInfos) => {
+}: TvAndMovieInfosProps) => {
   const [image, setImage] = useState('')
   const [backdrop, setBackdrop] = useState('')
 
@@ -79,7 +79,7 @@ const MovieInfos = ({
           <img
             src={image}
             alt=""
-            className="max-h-60 h-full xl:min-w-80 xl:max-w-96 xl:w-full xl:max-h-520 xl:rounded-2xl"
+            className="max-h-60 h-full xl:min-w-82 xl:max-w-96 xl:w-full xl:max-h-520 xl:rounded-2xl"
           />
         </div>
         <div className="font-jockey flex flex-col items-center pt-4 px-8 xl:items-start">
@@ -195,7 +195,7 @@ const MovieInfos = ({
         </div>
         <Link
           to={'/'}
-          className="block text-lg font-bold px-8 pt-4 hover:text-white transition-colors duration-150 md:justify-start"
+          className="block text-lg font-bold px-8 pt-4 hover:text-white transition-colors duration-150 md:justify-start lg:px-0"
         >
           Ver mais →
         </Link>
@@ -204,4 +204,4 @@ const MovieInfos = ({
   )
 }
 
-export default MovieInfos
+export default TvAndMovieInfos

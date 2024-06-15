@@ -34,7 +34,8 @@ export default {
       minWidth: {
         90: '315px',
         350: '350px',
-        113: '113px'
+        113: '113px',
+        82: '22rem'
       },
       maxWidth: {
         315: '315px',

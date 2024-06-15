@@ -232,6 +232,116 @@ type ContentTv = {
   vote_count: number
 }
 
+type FamousContent = {
+  adult: boolean
+  also_known_as: string[]
+  biography: string
+  birthday: string
+  deathday: string
+  gender: number
+  homepage: string
+  id: number
+  imdb_id: string
+  known_for_department: string
+  name: string
+  place_of_birth: string
+  popularity: number
+  profile_path: string
+}
+
+type tvCredits = {
+  cast: TvCast[]
+  crew: TvCrew[]
+  id: number
+}
+
+export type TvCast = {
+  adult: boolean
+  backdrop_path: string
+  genre_ids: number[]
+  id: number
+  original_country: string[]
+  original_language: string
+  original_name: string
+  overview: string
+  popularity: number
+  poster_path: string
+  first_air_date: string
+  name: string
+  vote_average: number
+  vote_count: number
+  character: string
+  credit_id: string
+  episode_count: string
+}
+
+type TvCrew = {
+  adult: false
+  backdrop_path: string
+  genre_ids: number[]
+  id: number
+  original_country: string[]
+  original_language: string
+  original_name: string
+  overview: string
+  popularity: number
+  poster_path: string
+  first_air_date: string
+  name: string
+  vote_average: number
+  vote_count: number
+  credit_id: string
+  department: string
+  episode_count: number
+  job: string
+}
+
+type MovieCredits = {
+  cast: MoviesCast[]
+  crew: MoviesCrew[]
+  id: number
+}
+
+export type MoviesCast = {
+  adult: boolean
+  backdrop_path: string
+  genre_ids: number[]
+  id: number
+  original_language: string
+  original_title: string
+  overview: string
+  popularity: number
+  poster_path: string
+  release_date: string
+  title: string
+  video: boolean
+  vote_average: number
+  vote_count: number
+  character: string
+  credit_id: string
+  order: number
+}
+
+type MoviesCrew = {
+  adult: boolean
+  backdrop_path: string
+  genres_id: number[]
+  id: number
+  original_language: string
+  original_title: string
+  overview: string
+  popularity: number
+  poster_path: string
+  release_date: string
+  title: string
+  video: boolean
+  vote_average: number
+  vote_count: number
+  credit_id: string
+  department: string
+  job: string
+}
+
 export type Cast = {
   adult: boolean
   gender: number
@@ -301,6 +411,15 @@ const api = createApi({
     }),
     getTvCredits: builder.query<ResultCredits, string>({
       query: (s) => `/tv/${s}/credits?language=pt-BR`
+    }),
+    getFamous: builder.query<FamousContent, string>({
+      query: (s) => `/person/${s}?language=pt-BR`
+    }),
+    getFamousMoviesCredits: builder.query<MovieCredits, string>({
+      query: (s) => `/person/${s}/movie_credits?language=pt-BR`
+    }),
+    getFamousTvCredits: builder.query<tvCredits, string>({
+      query: (s) => `/person/${s}/tv_credits?language=pt-BR`
     })
   })
 })
@@ -312,7 +431,10 @@ export const {
   useGetMovieQuery,
   useGetMovieCreditsQuery,
   useGetTvQuery,
-  useGetTvCreditsQuery
+  useGetTvCreditsQuery,
+  useGetFamousQuery,
+  useGetFamousMoviesCreditsQuery,
+  useGetFamousTvCreditsQuery
 } = api
 
 export default api
