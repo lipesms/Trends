@@ -8,9 +8,16 @@ type CastCardProps = {
   profile_path: string
   name?: string
   character?: string
+  link: 'films' | 'series' | 'famous'
 }
 
-const CastCard = ({ id, profile_path, name, character }: CastCardProps) => {
+const CastCard = ({
+  id,
+  profile_path,
+  name,
+  character,
+  link
+}: CastCardProps) => {
   const [image, setImage] = useState('')
 
   useEffect(() => {
@@ -23,7 +30,7 @@ const CastCard = ({ id, profile_path, name, character }: CastCardProps) => {
     }
   }, [profile_path])
   return (
-    <Link to={`/famous/${id}`} className="relative max-w-32  xl:max-w-48">
+    <Link to={`/${link}/${id}`} className="relative max-w-32  xl:max-w-48">
       <img src={image} alt="" className="rounded-t-xl w-full max-h-50" />
       {name && character ? (
         <div className="flex flex-col justify-around text-xs absolute bottom-0 left-0 py-1 w-full min-h-16 bg-card-person-name xl:text-sm">

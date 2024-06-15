@@ -7,7 +7,7 @@ const TvSeries = () => {
 
   if (series) {
     return (
-      <div className="w-100 pt-24 px-8 flex flex-col lg:ps-40 lg:w-full lg:items-start lg:pt-10">
+      <div className="w-100 pt-24 px-8 flex flex-col lg:ps-40 lg:w-full lg:items-start lg:pt-10 select-none">
         <div className="pt-8 lg:ps-14 lg:pt-4 min-w-full">
           <h2 className="text-4xl font-bold text-center lg:text-start font-display">
             Séries do dia

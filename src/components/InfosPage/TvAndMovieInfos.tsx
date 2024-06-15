@@ -73,7 +73,7 @@ const TvAndMovieInfos = ({
   }
 
   return (
-    <div className="w-full h-full xl:px-8 ">
+    <div className="w-full h-full xl:px-8">
       <div className="relative w-full h-full xl:p-8 xl:flex xl:text-white">
         <div className="w-full p-6 flex justify-center xl:justify-start xl:p-0 xl:w-fit ">
           <img
@@ -188,6 +188,7 @@ const TvAndMovieInfos = ({
                   name={actor.name}
                   profile_path={actor.profile_path}
                   key={actor.id}
+                  link="famous"
                 />
               )
             }

@@ -15,7 +15,7 @@ const Home = () => {
   if (movies && tv && person) {
     return (
       <div>
-        <div className="pt-24 px-8 flex flex-col lg:ps-40 lg:w-full lg:items-start lg:pt-10 font-display">
+        <div className="pt-24 px-8 flex flex-col lg:ps-40 lg:w-full lg:items-start lg:pt-10 font-display select-none">
           <div className="pt-4 lg:ps-14">
             <h2 className="text-3xl font-bold text-center lg:text-start lg:text-5xl">
               Bem-vindo!

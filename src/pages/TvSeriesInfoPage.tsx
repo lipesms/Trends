@@ -12,7 +12,7 @@ const TvSeriesInfoPage = () => {
 
   if (data && cast) {
     return (
-      <div className="h-full pt-24 flex flex-col lg:ps-40 lg:w-full  lg:items-start lg:pt-10 font-display">
+      <div className="h-full pt-24 flex flex-col lg:ps-40 lg:w-full  lg:items-start lg:pt-10 font-display select-none">
         <TvAndMovieInfos
           backdrop_path={data.backdrop_path}
           genres={data.genres}

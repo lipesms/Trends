@@ -49,7 +49,7 @@ const FamousInfos = ({
   }, [backdrop_path, moviesCast])
 
   return (
-    <div className="w-full h-full xl:px-8 ">
+    <div className="w-full h-full xl:px-8">
       <div className="relative w-full h-full xl:p-8 xl:flex xl:text-white">
         <div className="w-full p-6 flex justify-center xl:justify-start xl:p-0 xl:w-fit ">
           <img
@@ -105,6 +105,7 @@ const FamousInfos = ({
                   name={movie.title}
                   profile_path={movie.poster_path}
                   key={movie.id}
+                  link="films"
                 />
               )
             }
@@ -125,6 +126,7 @@ const FamousInfos = ({
                     name={Serie.name}
                     profile_path={Serie.poster_path}
                     key={Serie.id}
+                    link="series"
                   />
                 )
               }

@@ -72,7 +72,7 @@ const TvAndMovieCard = ({
     <>
       <Link
         to={`/${link}/${id}`}
-        className={`z-10 relative flex w-full font-jockey bg-white ${odd ? 'rounded-ss-2xl ' : 'rounded-es-2xl rounded-se-2xl'} mb-8 lg:gap-8 lg:p-8 lg:rounded-2xl`}
+        className={`z-10 relative flex w-full font-jockey bg-white ${odd ? 'rounded-ss-2xl ' : 'rounded-es-2xl rounded-se-2xl'} mb-8 lg:gap-8 lg:p-8 lg:rounded-2xl `}
       >
         <div
           className={`max-w-40 min-w-40 lg:max-w-xs lg:min-w-80 ${odd ? 'order-2' : ''} lg:order-first`}
