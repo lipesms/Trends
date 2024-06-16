@@ -85,7 +85,7 @@ const TvAndMovieInfos = ({
           </p>
           <div className="flex items-center self-start text-3xl pt-8 gap-6 xl:text-2xl">
             <span
-              className={`border-2 ${setVoteAverageColor(vote_average)} rounded-full p-4 lg:py-6 lg:px-4 xl:py-4 xl:px-2`}
+              className={`border-2 ${setVoteAverageColor(vote_average)} rounded-full py-6 px-4`}
             >
               {vote_average}%
             </span>
@@ -191,7 +191,7 @@ const TvAndMovieInfos = ({
         </div>
         <Link
           to={'/'}
-          className="block text-lg font-bold px-8 pt-4 hover:text-white transition-colors duration-150 md:justify-start lg:px-0"
+          className="block text-lg font-bold pt-4 hover:text-white transition-colors duration-150 md:justify-start"
         >
           Ver mais →
         </Link>

@@ -3,9 +3,9 @@ import up from '../assets/icons/dedo-indicador.png'
 
 const Footer = () => {
   return (
-    <footer className="relative pt-28 px-8 pb-14 xl:ps-40">
-      <div className="max-w-618 xl:ps-14 ">
-        <p className="text-black text-sm font-bold  mb-1  ">
+    <footer className="relative pt-28 pb-14 xl:ps-40 ">
+      <div className="max-w-618 px-8 ">
+        <p className="text-black text-sm font-bold mb-1">
           A Treads é um site para ficar por dentro das tendências do cinema,
           sendo as séries do momento, filmes ou atores/atrizes.
         </p>
