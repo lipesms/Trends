@@ -117,7 +117,7 @@ const FamousInfos = ({
       {tvCast[0] ? (
         <div className="pt-8 px-8 xl:px-0">
           <h3 className="text-2xl font-bold pb-4">Principais séries</h3>
-          <div className="flex flex-wrap px-8 gap-4 justify-between md:justify-start lg:px-0">
+          <div className="flex flex-wrap gap-4 justify-between md:justify-start lg:px-0">
             {series.map((Serie, i) => {
               if (i <= 7) {
                 return (
