@@ -85,7 +85,7 @@ const TvAndMovieInfos = ({
             {release_date} (br) - {formatGenres(genres)} -{' '}
             {runtime ? formatRuntime(runtime) : ''}
           </p>
-          <div className="flex items-center self-start text-3xl pt-8 gap-6 xl:text-2xl">
+          <div className="flex items-center self-center text-3xl pt-8 gap-6 xl:text-2xl xl:self-start">
             <span
               className={`border-2 ${setVoteAverageColor(vote_average)} rounded-full py-6 px-4`}
             >
