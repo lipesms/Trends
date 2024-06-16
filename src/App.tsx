@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <AppRoute />
-        <div className="-z-10 w-full h-full fixed top-0 left-0 bg-body2"></div>
+        <div className="-z-10 w-full h-full fixed top-0 left-0 bg-body"></div>
         <Footer />
       </BrowserRouter>
     </Provider>
