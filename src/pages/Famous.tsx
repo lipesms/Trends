@@ -1,4 +1,4 @@
-import { checkPopularPersonItems } from '../Utils'
+import { checkPopularPersonItems, ordPopularFamous } from '../Utils'
 import FamousList from '../components/FamousList'
 import Loader from '../components/Loader'
 import { useGetPopularPersonQuery } from '../services/api'
@@ -8,6 +8,8 @@ const Famous = () => {
 
   if (data) {
     const famous = checkPopularPersonItems(data.results)
+    const ordFamous = ordPopularFamous(famous)
+    console.log(ordFamous)
     return (
       <div className="w-100 pt-24 px-8 flex flex-col select-none lg:w-full lg:items-start xl:ps-40 xl:pt-10">
         <div className="pt-8 min-w-full xl:ps-14 xl:pt-4">
@@ -15,7 +17,7 @@ const Famous = () => {
             Famosos do momento
           </h2>
           <div className="pt-9 lg:pt-10">
-            {famous.map((person, i) => {
+            {ordFamous.map((person, i) => {
               if (i <= 9) {
                 return (
                   <FamousList

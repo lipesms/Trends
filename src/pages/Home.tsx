@@ -6,13 +6,17 @@ import {
   useGetPopularPersonQuery,
   useGetPopularTvQuery
 } from '../services/api'
+import { ordPopularFamous } from '../Utils'
 
 const Home = () => {
   const { data: movies } = useGetPopularMoviesQuery()
   const { data: tv } = useGetPopularTvQuery()
-  const { data: person } = useGetPopularPersonQuery()
+  const { data: famous } = useGetPopularPersonQuery()
 
-  if (movies && tv && person) {
+  if (movies && tv && famous) {
+    const ordFamous = ordPopularFamous(famous.results)
+    console.log(ordFamous)
+
     return (
       <div>
         <div className="pt-24 px-8 flex flex-col font-display select-none lg:w-full lg:items-start xl:ps-40 xl:pt-10">
@@ -37,7 +41,7 @@ const Home = () => {
           />
           <HomeSection
             title="Famosos do momento"
-            dados={person!.results}
+            dados={ordFamous}
             type="person"
             link="famous"
           />

@@ -1,15 +1,24 @@
-export const checkPopularPersonItems = (persons: ResultPerson[] | Cast[]) => {
+export const checkPopularPersonItems = (persons: ResultPerson[]) => {
   return persons.filter((person) => person.profile_path)
 }
+export const checkPopularPersonCastItems = (personsCast: Cast[]) => {
+  return personsCast.filter((person) => person.profile_path)
+}
 
-export const checkPopularTvItems = (series: ResultTv[] | TvCast[]) => {
+export const checkPopularTvItems = (series: ResultTv[]) => {
   return series.filter((serie) => serie.poster_path)
 }
 
-export const checkPopularMovieItems = (
-  movies: ResultMovies[] | MoviesCast[]
-) => {
+export const checkPopularTvCastItems = (seriesCast: TvCast[]) => {
+  return seriesCast.filter((serie) => serie.poster_path)
+}
+
+export const checkPopularMovieItems = (movies: ResultMovies[]) => {
   return movies.filter((movie) => movie.poster_path)
+}
+
+export const checkPopularMovieCastItems = (moviesCast: MoviesCast[]) => {
+  return moviesCast.filter((movie) => movie.poster_path)
 }
 
 export const formatGenres = (genres: genre[]) => {
@@ -32,4 +41,14 @@ export const setVoteAverageColor = (vote: number) => {
     return 'border-amber-500'
   }
   return 'border-orange-900'
+}
+
+export const ordPopularFamous = (famous: ResultPerson[]) => {
+  return famous.slice().sort((a, b) => b.popularity - a.popularity)
+}
+export const ordFamousMoviesCredits = (famous: MoviesCast[]) => {
+  return famous.slice().sort((a, b) => b.popularity - a.popularity)
+}
+export const ordFamousTvCredits = (famous: TvCast[]) => {
+  return famous.slice().sort((a, b) => b.popularity - a.popularity)
 }

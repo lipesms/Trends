@@ -6,8 +6,8 @@ import CastCard from '../CastCard'
 import {
   formatGenres,
   formatRuntime,
-  checkPopularPersonItems,
-  setVoteAverageColor
+  setVoteAverageColor,
+  checkPopularPersonCastItems
 } from '../../Utils'
 
 type TvAndMovieInfosProps = {
@@ -65,7 +65,7 @@ const TvAndMovieInfos = ({
     }
   }, [backdrop_path])
 
-  const credits = checkPopularPersonItems(cast)
+  const credits = checkPopularPersonCastItems(cast)
 
   return (
     <div className="w-full h-full xl:px-8">
@@ -77,15 +77,15 @@ const TvAndMovieInfos = ({
             className="max-h-60 h-full xl:min-w-82 xl:max-w-96 xl:w-full xl:max-h-520 xl:rounded-2xl"
           />
         </div>
-        <div className="font-jockey flex flex-col items-center pt-4 px-8">
+        <div className="font-jockey flex flex-col items-center pt-4 px-8 xl:items-start">
           <h2 className="text-5xl ">{title}</h2>
           <p className="hidden xl:block pt-4">
             {release_date} (br) - {formatGenres(genres)} -{' '}
             {runtime ? formatRuntime(runtime) : ''}
           </p>
-          <div className="flex items-center self-start text-3xl pt-8 gap-6">
+          <div className="flex items-center self-start text-3xl pt-8 gap-6 xl:text-2xl">
             <span
-              className={`border-2 ${setVoteAverageColor(vote_average)} rounded-full p-4 lg:py-6 lg:px-4`}
+              className={`border-2 ${setVoteAverageColor(vote_average)} rounded-full p-4 lg:py-6 lg:px-4 xl:py-4 xl:px-2`}
             >
               {vote_average}%
             </span>
@@ -171,11 +171,9 @@ const TvAndMovieInfos = ({
         />
         <div className="-z-9 w-full max-h-72 h-full absolute top-0 left-0 bg-hover-card-black xl:rounded-3xl xl:block xl:max-h-none"></div>
       </div>
-      <div className="pt-8 px-8">
-        <h3 className="text-2xl font-bold pb-4 px-8 lg:px-0">
-          Elenco principal
-        </h3>
-        <div className="flex flex-wrap px-8 gap-4 justify-around sm:justify-center md:justify-start lg:px-0">
+      <div className="pt-8 px-8 xl:px-0">
+        <h3 className="text-2xl font-bold pb-4 lg:px-0">Elenco principal</h3>
+        <div className="flex flex-wrap gap-4 justify-between md:justify-start lg:px-0">
           {credits.map((actor, i) => {
             if (i <= 7) {
               return (

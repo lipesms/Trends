@@ -8,6 +8,7 @@ import {
   useGetFamousTvCreditsQuery
 } from './../services/api'
 import Loader from '../components/Loader'
+import { ordFamousMoviesCredits, ordFamousTvCredits } from '../Utils'
 
 const FamousInfosPage = () => {
   const { id } = useParams()
@@ -16,6 +17,9 @@ const FamousInfosPage = () => {
   const { data: tvCredits } = useGetFamousTvCreditsQuery(String(id))
 
   if (data && movieCredits && tvCredits) {
+    const ordMovieCredits = ordFamousMoviesCredits(movieCredits.cast)
+    const ordTvCredits = ordFamousTvCredits(tvCredits.cast)
+    console.log()
     return (
       <div className="h-full pt-24 flex flex-col font-display select-none xl:ps-40 xl:w-full xl:items-start xl:pt-10">
         <FamousInfos
@@ -25,8 +29,8 @@ const FamousInfosPage = () => {
           name={data.name}
           place_of_birth={data.place_of_birth}
           profile_path={data.profile_path}
-          moviesCast={movieCredits.cast}
-          tvCast={tvCredits.cast}
+          moviesCast={ordMovieCredits}
+          tvCast={ordTvCredits}
         />
       </div>
     )
