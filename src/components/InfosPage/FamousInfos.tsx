@@ -60,8 +60,8 @@ const FamousInfos = ({
             className="max-h-60 h-full xl:min-w-82 xl:max-w-96 xl:w-full xl:max-h-520 xl:rounded-2xl"
           />
         </div>
-        <div className="flex flex-col  pt-4 px-8 xl:items-start">
-          <h2 className="text-4xl font-bold self-center xl:self-start">
+        <div className="flex flex-col pt-4 px-8">
+          <h2 className="text-4xl font-bold text-center self-center xl:self-start">
             {name}
           </h2>
           <div className="pt-8 text-xl lg:order-2">

@@ -78,7 +78,9 @@ const TvAndMovieInfos = ({
           />
         </div>
         <div className="font-jockey flex flex-col items-center pt-4 px-8 xl:items-start">
-          <h2 className="text-5xl ">{title}</h2>
+          <h2 className="text-5xl text-center self-center xl:self-start">
+            {title}
+          </h2>
           <p className="hidden xl:block pt-4">
             {release_date} (br) - {formatGenres(genres)} -{' '}
             {runtime ? formatRuntime(runtime) : ''}
