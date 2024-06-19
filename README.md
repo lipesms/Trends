@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+<h1 align="center">Trends</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Página inicial da Trends](/src//assets/images/banner.png)
 
-Currently, two official plugins are available:
+<p align="center">Um jeito fácil de experênciar bons restaurantes do confroto da sua casa.</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Projeto
 
-## Expanding the ESLint configuration
+O Trends é um site para quem deseja estar atualizado sobre as novas séries do momento, filmes e famosos, reunindo uma coletanea de informações de primeira para saber mais sobre seus conteudos favoritos.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Fique por dentro através do <a href="https://trends-hazel.vercel.app/">link do Vercel</a>
 
-- Configure the top-level `parserOptions` property like this:
+## Desafio
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Como parte do projeto, o desenvolvedor deve ser capaz de:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Criar um layout responsivo e respeitando o design original
+- Fazer a componentização dos elementos
+- Consumir a API do TMDB e renderizar seus elementos
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- React
+- Typescript
+- TailwindCSS
+- React Hooks
+- Eslint e Prettier
+- Git e Github
+
+## O que aprendi
+
+Com o objetivo de aumentar meu portifólio, aprendi muito:
+
+- Criar um layout responsivo utilizando TailwindCSS
+- Aprender mais sobre React router dom
+- Aprender como manipular as headers na hora de fazer uma solicitação com React
+
+## Ajustes e melhorias
+
+- [X] Melhorar SEO do site
+- [X] Refatorar nomes de arquvos e funções
+- [X] Fazer página com cast do filme ou da série
+- [X] Criar barra de busca para localizar o item que deseja
