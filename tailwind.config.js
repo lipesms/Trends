@@ -9,7 +9,8 @@ export default {
 
     extend: {
       zIndex: {
-        9: '9'
+        9: '9',
+        8: '8'
       },
       gridTemplateColumns: {
         // Simple 16 column grid
@@ -23,10 +24,24 @@ export default {
         'secondary-blue': '#455480',
         'hover-card-black': 'rgba(0,0,0, 0.7)',
         'card-person-name': 'rgba(0,0,0, 0.5)',
-        'movie-infos': 'rgba(217,217,217, 0.3)'
+        'movie-infos': 'rgba(217,217,217, 0.3)',
+        purple: '#8331D3',
+        orange: '#EE5253',
+        amarelo: '#FCCA64'
       },
+      inset: {
+        20: '20%',
+        35: '35%',
+        48: '48%',
+        57: '57%',
+        65: '65%'
+      },
+
       height: {
-        90: '450px'
+        90: '450px',
+        680: '680px',
+        45: '45%',
+        '32rem': '32rem'
       },
       maxHeight: {
         520: '520px'

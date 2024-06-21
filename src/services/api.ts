@@ -43,6 +43,9 @@ const api = createApi({
     }),
     getFamousTvCredits: builder.query<tvCredits, string>({
       query: (s) => `/person/${s}/tv_credits?language=pt-BR`
+    }),
+    getUpComingMovies: builder.query<UpComing, void>({
+      query: () => '/movie/upcoming?language=pt-BR&page=1&region=BR'
     })
   })
 })
@@ -57,7 +60,8 @@ export const {
   useGetTvCreditsQuery,
   useGetFamousQuery,
   useGetFamousMoviesCreditsQuery,
-  useGetFamousTvCreditsQuery
+  useGetFamousTvCreditsQuery,
+  useGetUpComingMoviesQuery
 } = api
 
 export default api

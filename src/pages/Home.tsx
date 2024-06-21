@@ -7,6 +7,7 @@ import {
   useGetPopularTvQuery
 } from '../services/api'
 import { ordPopularFamous } from '../Utils'
+import UpComingSection from '../components/UpComingSection'
 
 const Home = () => {
   const { data: movies } = useGetPopularMoviesQuery()
@@ -34,6 +35,7 @@ const Home = () => {
             dados={movies.results}
             link="films"
           />
+          <UpComingSection title="Em breve!" />
           <HomeSection
             title="Séries populares do dia"
             dados={tv.results}

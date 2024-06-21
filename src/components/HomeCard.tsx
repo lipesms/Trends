@@ -32,7 +32,7 @@ const HomeCard = ({
   return (
     <Link
       to={`/${link}/${id}`}
-      className="relative w-full relative select-none drop-shadow-xl hover:drop-shadow-2xl "
+      className="relative w-full relative select-none drop-shadow-xl hover:drop-shadow-2xl hover:scale-105 transition-all duration-150"
     >
       <img src={img} alt="" className="rounded-2xl w-full" />
       {type === 'person' ? (

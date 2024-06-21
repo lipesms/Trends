@@ -376,3 +376,12 @@ type ResultCredits = {
   cast: Cast[]
   crew: Crew[]
 }
+
+declare type UpComing = {
+  dates: {
+    maximum: string
+    minimum: string
+  }
+  page: number
+  results: ResultMovies[]
+}
