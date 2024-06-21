@@ -2,7 +2,11 @@ import { useEffect, useState } from 'react'
 
 import personPlaceholder from '../../assets/images/placeholder_person.png'
 import CastCard from '../CastCard'
-import { checkPopularMovieItems, checkPopularTvCastItems } from '../../Utils'
+import {
+  checkPopularMovieItems,
+  checkPopularTvCastItems,
+  removeDuplicatedSeries
+} from '../../Utils'
 
 type FamousInfoProps = {
   profile_path: string
@@ -30,7 +34,10 @@ const FamousInfos = ({
   const [image, setImage] = useState('')
   const [backdrop, setBackdrop] = useState('')
   const movies = checkPopularMovieItems(moviesCast)
-  const series = checkPopularTvCastItems(tvCast)
+  const seriesData = checkPopularTvCastItems(tvCast)
+  const series = removeDuplicatedSeries(seriesData)
+
+  console.log(series)
 
   useEffect(() => {
     if (profile_path) {

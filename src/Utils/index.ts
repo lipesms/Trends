@@ -52,3 +52,17 @@ export const ordFamousMoviesCredits = (famous: MoviesCast[]) => {
 export const ordFamousTvCredits = (famous: TvCast[]) => {
   return famous.slice().sort((a, b) => b.popularity - a.popularity)
 }
+
+export const removeDuplicatedSeries = (array: TvCast[]) => {
+  const matchingIds: number[] = []
+  const result: TvCast[] = []
+
+  array.forEach((serie) => {
+    const id = serie.id
+    if (!matchingIds.includes(id)) {
+      matchingIds.push(id)
+      result.push(serie)
+    }
+  })
+  return result
+}
