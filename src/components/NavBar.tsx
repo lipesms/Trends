@@ -40,14 +40,14 @@ const NavBar = () => {
           </Link>
           <Link
             to="/series"
-            className={`flex items-center justify-start text-black font-bold  ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 border-transparent hover:border-black transition easy-out duration-200 ${sections == 'séries' ? 'border-black' : 'border-transparent'}`}
+            className={`flex items-center justify-start text-black font-bold  ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'séries' ? 'border-black' : 'border-transparent'}`}
             onClick={() => dispatch(changeSection('séries'))}
           >
             Séries
           </Link>
           <Link
             to="/famous"
-            className={`flex items-center justify-start text-black font-bold  ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 border-transparent hover:border-black transition easy-out duration-200 ${sections == 'famosos' ? 'border-black' : 'border-transparent'}`}
+            className={`flex items-center justify-start text-black font-bold ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'famosos' ? 'border-black' : 'border-transparent'}`}
             onClick={() => dispatch(changeSection('famosos'))}
           >
             Famosos
