@@ -28,6 +28,8 @@ const TvSeriesInfoPage = () => {
           vote_average={Math.round(data.vote_average * 10)}
           seasons={data.number_of_seasons}
           cast={cast.cast}
+          id={data.id}
+          type="series"
         />
       </div>
     )

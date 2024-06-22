@@ -34,7 +34,11 @@ const HomeCard = ({
       to={`/${link}/${id}`}
       className="relative w-full relative select-none drop-shadow-xl hover:drop-shadow-2xl hover:scale-105 transition-all duration-150"
     >
-      <img src={img} alt="" className="rounded-2xl w-full" />
+      <img
+        src={img}
+        alt=""
+        className="rounded-2xl w-full h-full object-cover"
+      />
       {type === 'person' ? (
         <div className="absolute bottom-0 left-0 py-4 w-full  bg-card-person-name rounded-b-2xl">
           <p className="text-center text-lg font-bold text-white">{titulo}</p>

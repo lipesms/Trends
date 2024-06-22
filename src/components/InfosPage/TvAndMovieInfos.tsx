@@ -27,6 +27,8 @@ type TvAndMovieInfosProps = {
   budget?: number
   seasons?: number
   cast: Cast[]
+  id: number
+  type: 'films' | 'series'
 }
 
 const TvAndMovieInfos = ({
@@ -45,7 +47,9 @@ const TvAndMovieInfos = ({
   revenue,
   budget,
   seasons,
-  cast
+  cast,
+  id,
+  type
 }: TvAndMovieInfosProps) => {
   const [image, setImage] = useState('')
   const [backdrop, setBackdrop] = useState('')
@@ -66,6 +70,7 @@ const TvAndMovieInfos = ({
   }, [backdrop_path])
 
   const credits = checkPopularPersonCastItems(cast)
+  console.log(id)
 
   return (
     <div className="w-full h-full xl:px-8">
@@ -175,9 +180,9 @@ const TvAndMovieInfos = ({
       </div>
       <div className="pt-8 px-8 xl:px-0">
         <h3 className="text-2xl font-bold pb-4 lg:px-0">Elenco principal</h3>
-        <div className="flex flex-wrap gap-4 justify-between md:justify-start lg:px-0">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 justify-between md:justify-start lg:px-0">
           {credits.map((actor, i) => {
-            if (i <= 7) {
+            if (i < 7) {
               return (
                 <CastCard
                   character={actor.character}
@@ -192,7 +197,7 @@ const TvAndMovieInfos = ({
           })}
         </div>
         <Link
-          to={'/'}
+          to={`/${type}/${id}}/cast`}
           className="block text-lg font-bold pt-4 hover:text-white transition-colors duration-150 md:justify-start"
         >
           Ver mais →

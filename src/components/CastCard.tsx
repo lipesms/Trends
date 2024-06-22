@@ -34,7 +34,7 @@ const CastCard = ({
       <img
         src={image}
         alt=""
-        className="rounded-t-xl min-w-36 max-w-36 min-h-52 max-h-52"
+        className="rounded-t-xl min-w-36 min-h-52 h-full object-cover"
       />
       {name || character ? (
         <div className="flex flex-col justify-around text-xs absolute bottom-0 left-0 py-1 w-full min-h-16 bg-card-person-name xl:text-sm">

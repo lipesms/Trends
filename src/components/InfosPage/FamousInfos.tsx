@@ -105,13 +105,12 @@ const FamousInfos = ({
       </div>
       <div className="pt-8 px-8 xl:px-0">
         <h3 className="text-2xl font-bold pb-4">Principais filmes</h3>
-        <div className="flex flex-wrap gap-4 justify-between md:justify-start lg:px-0">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 justify-between md:justify-start lg:px-0">
           {movies.map((movie, i) => {
-            if (i <= 7) {
+            if (i < 7) {
               return (
                 <CastCard
                   id={movie.id}
-                  name={movie.title}
                   profile_path={movie.poster_path}
                   key={movie.id}
                   link="films"
@@ -124,13 +123,12 @@ const FamousInfos = ({
       {tvCast[0] ? (
         <div className="pt-8 px-8 xl:px-0">
           <h3 className="text-2xl font-bold pb-4">Principais séries</h3>
-          <div className="flex flex-wrap gap-4 justify-between md:justify-start lg:px-0">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 justify-between md:justify-start lg:px-0">
             {series.map((Serie, i) => {
-              if (i <= 7) {
+              if (i < 7) {
                 return (
                   <CastCard
                     id={Serie.id}
-                    name={Serie.name}
                     profile_path={Serie.poster_path}
                     key={Serie.id}
                     link="series"

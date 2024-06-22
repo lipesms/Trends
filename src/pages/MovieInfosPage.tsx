@@ -29,6 +29,8 @@ const MovieInfosPage = () => {
           title={data.title}
           vote_average={Math.round(data.vote_average * 10)}
           cast={credits.cast}
+          id={data.id}
+          type="films"
         />
       </div>
     )
