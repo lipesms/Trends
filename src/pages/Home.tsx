@@ -32,17 +32,19 @@ const Home = () => {
           title="Filmes em destaque hoje"
           dados={movies.results}
           link="films"
+          type="films"
         />
         <UpComingSection title="Em breve!" />
         <HomeSection
           title="Séries populares do dia"
           dados={tv.results}
           link="series"
+          type="series"
         />
         <HomeSection
           title="Famosos do momento"
           dados={ordFamous}
-          type="person"
+          type="famous"
           link="famous"
         />
       </div>

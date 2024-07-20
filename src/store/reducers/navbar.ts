@@ -1,11 +1,11 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-type navBar = {
-  sections: 'inicio' | 'filmes' | 'séries' | 'famosos'
+export type NavBarType = {
+  sections: 'home' | 'films' | 'series' | 'famous'
 }
 
-const initialState: navBar = {
-  sections: 'inicio'
+const initialState: NavBarType = {
+  sections: 'home'
 }
 
 const navBarSlice = createSlice({
@@ -14,7 +14,7 @@ const navBarSlice = createSlice({
   reducers: {
     changeSection: (
       state,
-      action: PayloadAction<'inicio' | 'filmes' | 'séries' | 'famosos'>
+      action: PayloadAction<'home' | 'films' | 'series' | 'famous'>
     ) => {
       if (action.payload != undefined) {
         state.sections = action.payload

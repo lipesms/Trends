@@ -26,29 +26,29 @@ const NavBar = () => {
         <div className="flex xl:flex-col xl:items-center xl:mt-8 cursor-pointer xl:mt-4">
           <Link
             to="/"
-            className={`box-border flex items-center justify-start text-black font-bold ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'inicio' ? 'border-black' : 'border-transparent'}`}
-            onClick={() => dispatch(changeSection('inicio'))}
+            className={`box-border flex items-center justify-start text-black font-bold ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'home' ? 'border-black' : 'border-transparent'}`}
+            onClick={() => dispatch(changeSection('home'))}
           >
             Inicio
           </Link>
           <Link
             to="/films"
-            className={`box-border flex items-center justify-start text-black font-bold ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'filmes' ? 'border-black' : 'border-transparent'}`}
-            onClick={() => dispatch(changeSection('filmes'))}
+            className={`box-border flex items-center justify-start text-black font-bold ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'films' ? 'border-black' : 'border-transparent'}`}
+            onClick={() => dispatch(changeSection('films'))}
           >
             Filmes
           </Link>
           <Link
             to="/series"
-            className={`flex items-center justify-start text-black font-bold  ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'séries' ? 'border-black' : 'border-transparent'}`}
-            onClick={() => dispatch(changeSection('séries'))}
+            className={`flex items-center justify-start text-black font-bold  ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'series' ? 'border-black' : 'border-transparent'}`}
+            onClick={() => dispatch(changeSection('series'))}
           >
             Séries
           </Link>
           <Link
             to="/famous"
-            className={`flex items-center justify-start text-black font-bold ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'famosos' ? 'border-black' : 'border-transparent'}`}
-            onClick={() => dispatch(changeSection('famosos'))}
+            className={`flex items-center justify-start text-black font-bold ms-2 sm:ms-6 md:inline-block sm:text-xl xl:ms-0 xl:mb-6 pb-1 border-solid border-b-2 hover:border-black transition easy-out duration-200 ${sections == 'famous' ? 'border-black' : 'border-transparent'}`}
+            onClick={() => dispatch(changeSection('famous'))}
           >
             Famosos
           </Link>

@@ -6,17 +6,11 @@ export type CardItems = {
   titulo?: string
   image?: string
   id: number
-  type?: 'person' | 'tvAndMovie'
+  type?: 'famous' | 'films' | 'series'
   link: string
 }
 
-const HomeCard = ({
-  titulo,
-  image,
-  type = 'tvAndMovie',
-  id,
-  link
-}: CardItems) => {
+const HomeCard = ({ titulo, image, type = 'films', id, link }: CardItems) => {
   const [img, setImg] = useState('')
 
   useEffect(() => {
@@ -39,7 +33,7 @@ const HomeCard = ({
         alt=""
         className="rounded-2xl w-full h-full object-cover"
       />
-      {type === 'person' ? (
+      {type === 'famous' ? (
         <div className="absolute bottom-0 left-0 py-4 w-full  bg-card-person-name rounded-b-2xl">
           <p className="text-center text-lg font-bold text-white">{titulo}</p>
         </div>

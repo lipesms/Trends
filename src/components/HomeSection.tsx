@@ -1,13 +1,17 @@
+import { Link } from 'react-router-dom'
 import HomeCard from './HomeCard'
+import { changeSection } from '../store/reducers/navbar'
+import { useDispatch } from 'react-redux'
 
 type Props = {
   title: string
   dados: ResultMovies[] | ResultTv[] | ResultPerson[]
-  type?: 'person' | 'tvAndMovie'
+  type?: 'famous' | 'films' | 'series'
   link: string
 }
 
-const HomeSection = ({ title, dados, link, type = 'tvAndMovie' }: Props) => {
+const HomeSection = ({ title, dados, link, type = 'films' }: Props) => {
+  const dispatch = useDispatch()
   if (!dados) {
     return <h3>Carregando...</h3>
   } else {
@@ -32,12 +36,13 @@ const HomeSection = ({ title, dados, link, type = 'tvAndMovie' }: Props) => {
             }
           })}
         </div>
-        <a
-          href={link}
+        <Link
+          to={link}
           className="w-full text-start text-stone-600 hover:text-black transition easy-out text-xl font-display mt-6 sm:self-start lg:self-auto"
+          onClick={() => dispatch(changeSection(type))}
         >
           Ver mais →
-        </a>
+        </Link>
       </section>
     )
   }
