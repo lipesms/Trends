@@ -37,8 +37,6 @@ const FamousInfos = ({
   const seriesData = checkPopularTvCastItems(tvCast)
   const series = removeDuplicatedSeries(seriesData)
 
-  console.log(series)
-
   useEffect(() => {
     if (profile_path) {
       fetch(`https://image.tmdb.org/t/p/w500${profile_path}`).then((resp) =>

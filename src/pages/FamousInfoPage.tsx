@@ -19,7 +19,6 @@ const FamousInfosPage = () => {
   if (data && movieCredits && tvCredits) {
     const ordMovieCredits = ordFamousMoviesCredits(movieCredits.cast)
     const ordTvCredits = ordFamousTvCredits(tvCredits.cast)
-    console.log()
     return (
       <div className="h-full pt-24 flex flex-col font-display select-none xl:ps-40 xl:w-full xl:items-start xl:pt-10">
         <FamousInfos

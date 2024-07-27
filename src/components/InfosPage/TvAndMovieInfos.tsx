@@ -70,7 +70,6 @@ const TvAndMovieInfos = ({
   }, [backdrop_path])
 
   const credits = checkPopularPersonCastItems(cast)
-  console.log(id)
 
   return (
     <div className="w-full h-full xl:px-8">

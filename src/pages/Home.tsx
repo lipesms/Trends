@@ -16,7 +16,6 @@ const Home = () => {
 
   if (movies && tv && famous) {
     const ordFamous = ordPopularFamous(famous.results)
-    console.log(ordFamous)
 
     return (
       <div className="pt-24 px-8 flex flex-col font-display select-none lg:w-full lg:items-start xl:ps-40 xl:pt-10">

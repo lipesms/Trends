@@ -22,7 +22,6 @@ const UpComingSection = ({ title }: UpComingProps) => {
       )
     }
   }, [data])
-  console.log(data)
   if (data) {
     return (
       <section className="w-90 pt-4 pb-8 flex flex-col items-center drop-shadow-xl lg:items-start md:pt-10 lg:h-fit xl:pe-8 xl:ps-14 xl:min-w-full">
