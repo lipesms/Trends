@@ -6,7 +6,7 @@ import {
   useGetPopularPersonQuery,
   useGetPopularTvQuery
 } from '../services/api'
-import { ordPopularFamous } from '../Utils'
+import { checkPopularPersonItems, ordPopularFamous } from '../Utils'
 import UpComingSection from '../components/UpComingSection'
 
 const Home = () => {
@@ -15,7 +15,8 @@ const Home = () => {
   const { data: famous } = useGetPopularPersonQuery()
 
   if (movies && tv && famous) {
-    const ordFamous = ordPopularFamous(famous.results)
+    const famousPeople = checkPopularPersonItems(famous.results)
+    const ordFamous = ordPopularFamous(famousPeople)
 
     return (
       <div className="pt-24 px-8 flex flex-col font-display select-none lg:w-full lg:items-start xl:ps-40 xl:pt-10">

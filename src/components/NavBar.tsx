@@ -11,7 +11,7 @@ const NavBar = () => {
   return (
     <div className="z-20 fixed h-24 w-screen h-24 bg-white xl:h-screen xl:pt-10 px-8 xl:px-0 xl:max-w-40 font-display select-none">
       <div className="flex justify-between items-center h-full xl:flex-col xl:items-center xl:justify-normal">
-        <Link to="">
+        <Link to="/" onClick={() => dispatch(changeSection('home'))}>
           <img
             src={logo}
             alt="Logo MovieTrends"
