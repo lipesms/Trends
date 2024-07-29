@@ -1,6 +1,6 @@
 export const checkPopularPersonItems = (persons: ResultPerson[]) => {
   const blacklist = [
-    3164807, 2710789, 3194176, 2472212, 2093355, 1622390, 1781425
+    3164807, 2710789, 3194176, 2472212, 2093355, 1622390, 1781425, 2349944
   ]
   return persons.filter(
     (person) => person.profile_path && !blacklist.includes(person.id)
