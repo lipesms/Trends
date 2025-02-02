@@ -16,18 +16,19 @@ const Famous = () => {
             Famosos do momento
           </h2>
           <div className="pt-9 lg:pt-10">
-            {ordFamous.map((person, i) => {
+            {
+            ordFamous.map((person, i) => {
               if (i <= 9) {
                 return (
                   <FamousList
                     key={person.id}
                     id={person.id}
                     original_name={person.original_name}
-                    know_for={person.known_for ? person.known_for : []}
                     profile_path={person.profile_path}
                     odd={i % 2 != 0}
                   />
                 )
+                
               }
             })}
           </div>

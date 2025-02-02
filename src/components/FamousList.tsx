@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import placeholder from '../assets/images/placeholder_person.png'
+import { useGetFamousMoviesCreditsQuery } from '../services/api'
 
 type FamousProps = {
   profile_path: string
   original_name: string
-  know_for: KnowFor[]
   id: number
   odd: boolean
 }
@@ -14,12 +14,26 @@ type FamousProps = {
 const FamousList = ({
   profile_path,
   original_name,
-  know_for,
   id,
   odd
 }: FamousProps) => {
   const [img, setImg] = useState('')
   const [backdrop, setBackdrop] = useState('')
+  const {data} = useGetFamousMoviesCreditsQuery(id.toString())
+  
+  useEffect(() => {
+    console.log(data?.cast)
+    const tamanho = data?.cast.length
+    if(tamanho && data){
+      for(let i = 0; i < tamanho; i++){
+        if (data?.cast[i].backdrop_path != null){
+          fetch(`https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${data?.cast[i].backdrop_path}`)
+            .then((resp) => setBackdrop(resp.url))
+            break
+        }
+      }
+    }    
+  }, [data])
 
   useEffect(() => {
     if (profile_path) {
@@ -31,24 +45,12 @@ const FamousList = ({
     }
   }, [profile_path])
 
-  useEffect(() => {
-    if (know_for[0].backdrop_path) {
-      fetch(
-        `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces${know_for[0].backdrop_path}`
-      ).then((resp) => setBackdrop(resp.url))
-    } else {
-      fetch('https://placehold.co/1920x800').then((resp) =>
-        setBackdrop(resp.url)
-      )
-    }
-  }, [know_for])
-
-  const formatKnowFor = (knowFor: KnowFor[]) => {
-    return knowFor.map((movie) =>
-      movie.original_title ? movie.original_title : movie.name
+  const formatKnowFor = (movieCast: MoviesCast[]) => {
+    return movieCast.map((movie) =>
+      movie.title ? movie.title : movie.original_title
     )
   }
-
+  if(backdrop){
   return (
     <>
       <Link
@@ -74,9 +76,11 @@ const FamousList = ({
             </h4>
             <span className="lg:text-white lg:text-2xl ">
               <ul>
-                {formatKnowFor(know_for).map((media) => (
-                  <li key={media}>{media}</li>
-                ))}
+                {formatKnowFor(data?.cast ? data.cast : []).map((media, i) => {
+                  if(i < 3){
+                    return (<li key={media}>{media}</li>)
+                  }
+                })}
               </ul>
             </span>
           </div>
@@ -89,6 +93,7 @@ const FamousList = ({
       </Link>
     </>
   )
+}
 }
 
 export default FamousList
